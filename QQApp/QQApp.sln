@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQApp", "QQApp\QQApp.csproj", "{A54E2136-4003-4A5F-918A-DBA51F1ECB02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQService", "QQService\QQService.csproj", "{2E74E6F2-9EC0-47EB-8055-821D2C701773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Debug|x86.ActiveCfg = Debug|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Debug|x86.Build.0 = Debug|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Release|Any CPU.ActiveCfg = Release|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Release|x86.ActiveCfg = Release|x86
+		{A54E2136-4003-4A5F-918A-DBA51F1ECB02}.Release|x86.Build.0 = Release|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Debug|x86.ActiveCfg = Debug|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Debug|x86.Build.0 = Debug|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Release|x86.ActiveCfg = Release|x86
+		{2E74E6F2-9EC0-47EB-8055-821D2C701773}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

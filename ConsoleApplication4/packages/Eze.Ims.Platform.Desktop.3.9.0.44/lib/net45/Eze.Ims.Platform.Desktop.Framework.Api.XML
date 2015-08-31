@@ -1,0 +1,2328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eze.Ims.Platform.Desktop.Framework.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.RepositoryRecord">
+            <summary>
+            The base class for using a Repository.  This class allow the Repository to handle sorting
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.ChangeTrackingBase.Clone">
+            <summary>
+            This will create an EXACT copy (clone) of the object being cloned uncluding items added, items removed and property changes
+            that are on the original.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.ChangeTrackingBase.Copy">
+            <summary>
+            This will return a copy from the original such that change tracking has ALL changes that were made to it that differ
+            from the default value.
+            This Should really only be used by secInfo so that the auditing will work properly for a copied security.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.RepositoryRecord.KeyId">
+            <summary>
+            A unique ID used by the repository to distinquish a new record from an update to an existing one.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.RepositoryRecord.ClientId">
+            <summary>
+            Since new records will not yet have an ID assigned by the server, we will assign them a client-side ID.
+            This ID will not be saved on the server-side, and will change every client session.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Alerts.IAlertableTile">
+            <summary>
+            Interface for Alertable Tiles (Tiles that can subscribe to and receive Alerts)
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Alerts.IAlertableTile.AlertTargetKey">
+            <summary>
+            Identifier as an Alert target
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IGlobalSearchService.InitiateReindex(System.Int32)">
+            <summary>
+            Initiates Global Search Reindex by firm
+            </summary>
+            <param name="firmId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IGlobalSearchService.IsSearchEnabled">
+            <summary>
+            Gets boolean indicating if the search workflow has been enabled for this firm
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IGlobalSearchService.IsSearchIndexingEnabled">
+            <summary>
+            Gets boolean indicating if the search indexing workflow has been enabled for the current user
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEvent">
+            <summary>
+            AlertEvent for subscription
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType">
+            <summary>
+            AlertEventType for the AlertEvent payload
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType.#ctor(Eze.Ims.Platform.Desktop.Framework.Api.Alerts.EzeAlert)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="alert"></param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType.AddToAlertTarget(System.String)">
+            <summary>
+            Add target to Alert for navigation
+            </summary>
+            <param name="target">For tiles, this will be the tile region name</param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType.Alert">
+            <summary>
+            The alert instance
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService">
+            <summary>
+            Interface for Alerts Service 
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService.CreateAlert(Eze.Ims.Platform.Desktop.Framework.Api.Alerts.EzeAlert,System.Boolean)">
+            <summary>
+            Create new Alert
+            </summary>
+            <param name="saveDomain"></param>
+            <param name="bAcceptChanges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService.DismissAlert(Eze.Ims.Platform.Desktop.Framework.Api.Alerts.EzeAlert)">
+            <summary>
+            Dismiss an alert
+            </summary>
+            <param name="deleteDomain"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService.SubscribeToAlerts(System.String,System.Action{Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType},System.Predicate{Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AlertEventType})">
+            <summary>
+            Subscribe to incoming Alerts
+            </summary>
+            <param name="tileRegion"></param>
+            <param name="alertAction"></param>
+            <param name="filter"></param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService.EzeAlerts">
+            <summary>
+            List of Alerts
+            </summary>
+        </member>
+        <member name="E:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IAlertsService.AlertCollectionChanged">
+            <summary>
+            AlertCollectionChanged event that fires after subscriptions have been handled
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService">
+            <summary>
+            A service for registering Hot Keys
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.RegisterOperatingSystemHotkey(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.Action)">
+            <summary>
+            Register a hotkey that will work from anywhere in the operating system.
+            </summary>
+            <param name="key">The non-modifier portion if the hotkey chord</param>
+            <param name="modifierKeys">The modifier keys for the hotkey chord. (ie. ModifierKeys.Control, ModifierKeys.Control | ModifierKeys.Alt)</param>
+            <param name="action">The action to be performed when the hotkey is pressed.</param>
+            <returns>True if the hotkey was registered.  False if there was a conflict.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.RegisterApplicationHotkey(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.Action)">
+            <summary>
+            Register a hotkey that will work as long as this application is active.
+            </summary>
+            <param name="key">The non-modifier portion if the hotkey chord</param>
+            <param name="modifierKeys">The modifier keys for the hotkey chord. (ie. ModifierKeys.Control, ModifierKeys.Control | ModifierKeys.Alt)</param>
+            <param name="action">The action to be performed when the hotkey is pressed.</param>
+            <returns>True if the hotkey was registered.  False if there was a conflict.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.RegisterTileHotkeyByInstance(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.Object,System.Action)">
+            <summary>
+            Register a hotkey the will work as long as the passed tile viewmodel instance is active.
+            You should unregister in the viewmodel's dispose method.
+            </summary>
+            <param name="key">The non-modifier portion if the hotkey chord</param>
+            <param name="modifierKeys">The modifier keys for the hotkey chord. (ie. ModifierKeys.Control, ModifierKeys.Control | ModifierKeys.Alt)</param>
+            <param name="viewModelInstance">A view model or WorkroomTile that are within the scope that this hotkey is valid.</param>
+            <param name="action">The action to be performed when the hotkey is pressed.</param>
+            <returns>True if the hotkey was registered.  False if there was a conflict.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.RegisterTileHotkeyByType``1(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.Action{``0})">
+            <summary>
+            Register a hotkey that will work as long as ANY instance of a tile with the indicated view model type is active.  You would use this method
+            to register a hotkey for a viewmodel externally to any instance of that viewmodel.  You shouldn't call UnregisterTileHotkeyByType unless
+            you no longer want this hotkey to work for any tiles of this type.
+            </summary>
+            <typeparam name="TTileViewModelType">The type of tile view model</typeparam>
+            <param name="key">The non-modifier portion if the hotkey chord</param>
+            <param name="modifierKeys">The modifier keys for the hotkey chord. (ie. ModifierKeys.Control, ModifierKeys.Control | ModifierKeys.Alt)</param>
+            <param name="action">The action to be performed when the hotkey is pressed. The active instance of the tile veiw model will be passed as the argument.</param>
+            <returns>True if the hotkey was registered.  False if there was a conflict.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.UnregisterOperatingSystemHotkey(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">
+            <summary>
+            Unregister the Hot Key from the service
+            </summary>
+            <param name="key"></param>
+            <param name="modifierKeys"></param>
+            <returns>True if the hotkey was unregistered.  False if no matching registration exists.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.UnregisterApplicationHotkey(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">
+            <summary>
+            Unregister the Hot Key from the service
+            </summary>
+            <param name="key"></param>
+            <param name="modifierKeys"></param>
+            <returns>True if the hotkey was unregistered.  False if no matching registration exists.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.UnregisterTileHotkeyByType``1(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">
+            <summary>
+            Unregister the Hot Key from the service
+            </summary>
+            <param name="key"></param>
+            <param name="modifierKeys"></param>
+            <returns>True if the hotkey was unregistered.  False if no matching registration exists.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IHotkeyService.UnregisterTileHotkeyByInstance(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.Object)">
+            <summary>
+            Unregister the Hot Key from the service
+            </summary>
+            <param name="key"></param>
+            <param name="modifierKeys"></param>
+            <param name="viewModelInstance"></param>
+            <returns>True if the hotkey was unregistered.  False if no matching registration exists.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IScheduleMapperService.GetScheduleTransport(Eze.WpfEx.Controls.Scheduler.Schedule)">
+            <summary>
+            Converts a Schedule Domain object to Schedule Transport object.
+            Known ScheduleDomain Types List:
+            OneTimeSchedule
+            DailyRecurrenceViewModel : RecurrenceSchedule
+            WeeklyRecurrenceViewModel : RecurrenceSchedule
+            MonthlyRecurrenceViewModel : RecurrenceSchedule
+            YearlyRecurrenceViewModel : RecurrenceSchedule
+            </summary>
+            <param name="scheduleDomain"></param>
+            <returns>An object of the type Eze.Ims.Platform.Api.Schedule</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IScheduleMapperService.GetScheduleDomain(Eze.Ims.Platform.Api.Schedule)">
+            <summary>
+            Converts a Schedule Transport object to ScheduleDomain object.
+            Known Transport Types List:
+            IntradaySchedule
+            DailySchedule
+            WeeklySchedule
+            MonthlySchedule
+            YearlySchedule
+            </summary>
+            <param name="scheduleTransport"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1">
+            <summary>
+            Contains functions for creating, reading, updating, and deleting records to be used by the Data Library.
+            </summary>
+            <typeparam name="T">
+            The data type.
+            </typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1.GetRecords">
+            <summary>
+            Retrieves the list of records of type T.
+            </summary>
+            <returns>
+            List of records from the server or local cache. If this is cached data, then it should be cloned. The Data Library will be modifying this data directly.
+            </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1.CreateNewRecord">
+            <summary>
+            Creates a new record of type T.
+            </summary>
+            <returns>
+            A new record of type T.
+            </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1.SaveRecords(System.Collections.Generic.List{`0})">
+            <summary>
+            Saves a list of new and/or updated records of type T.
+            </summary>
+            <param name="records">
+            A list of records of type T. RecordStatus of the records will be either New or Edit.
+            </param>
+            <returns>
+            RecordOperationResult indicating success or failure.
+            </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1.DeleteRecords(System.Collections.Generic.List{`0})">
+            <summary>
+            Deletes a list of records of type T.
+            </summary>
+            <param name="records">
+            A list of records of type T. RecordStatus of the records will be Delete.
+            </param>
+            <returns>
+            RecordOperationResult indicating success or failure.
+            </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud`1.SaveRecordOrder(System.Collections.Generic.List{`0})">
+            <summary>
+            Saves the order of the list of records.
+            </summary>
+            <param name="records">
+            An ordered list of records of type T.
+            </param>
+            <returns>
+            RecordOperationResult indicating success or failure.
+            </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.TranslateToDomain(`1)">
+            <summary>
+            Method that translates a transport object to a domain object
+            </summary>
+            <param name="transportObject">Input transport object</param>
+            <returns>The resulting domain object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.TranslateFromDomain(`0)">
+            <summary>
+            Method that translates a domain object to a transport object
+            </summary>
+            <param name="domainObject">Input domain object</param>
+            <returns>The resulting transport object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.TranslateToDomain(System.Collections.Generic.IList{`1})">
+            <summary>
+            Method that translates a list of transport objects to domain objects
+            </summary>
+            <param name="transportList">Input transport objects</param>
+            <returns>The resulting domain object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.TranslateFromDomain(System.Collections.Generic.IList{`0})">
+            <summary>
+            Method that translates a list of domain objects to transport objects
+            </summary>
+            <param name="domainList">List of domain objects to translate to transport objects</param>
+            <returns>The resulting transport object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.DeleteRecordAsync(`0)">
+            <summary>
+            Delete a single record.
+            </summary>
+            <param name="deleteDomain">Domain object to be deleted.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.DeleteRecordsAsync(System.Collections.Generic.IList{`0})">
+            <summary>
+            Delete multiple records.
+            </summary>
+            <param name="deleteDomainList">Domain objects to be deleted.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCrud`2.SaveRecordOrderAsync(System.Collections.Generic.IList{`0})">
+            <summary>
+            Asynchronously save the order of a list of records.
+            </summary>
+            <param name="domainObjectCollection">List of records whose order is to be saved.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.RepositoryCache`2.DeleteRecordAsync(`0)">
+            <summary>
+            Delete a record.
+            </summary>
+            <param name="deleteDomain">Domain object to be deleted.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2">
+            <summary>
+            Class containing functions for mapping properties of a transport object to or from a domain object.
+            </summary>
+            <typeparam name="TDomain">Domain ojbect type.</typeparam>
+            <typeparam name="TTransport">Transport object type.</typeparam>
+            <remarks>
+            By default, this class will map properties that share the same name. Overriding the CustomTransportToDomainMapper,
+            CustomDomainToTransportMapper, and/or CustomDomainToDomainMapper functions will allow for customizing the property mappings.
+            </remarks>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRepositoryMapper`2">
+            <summary>
+            Interface containing functions for mapping properties of a transport object to or from a domain object.
+            </summary>
+            <typeparam name="TDomain">Domain object type.</typeparam>
+            <typeparam name="TTransport">Transport object type.</typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRepositoryMapper`2.CreateMappers">
+            <summary>
+            Initialize property mappers. 
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRepositoryMapper`2.TranslateToDomain(`1)">
+            <summary>
+            Map transport object properties to domain object properties.
+            </summary>
+            <param name="transportObject">The transport object to map.</param>
+            <returns>A domain object with proprties mapped from the transport object.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRepositoryMapper`2.TranslateFromDomain(`0)">
+            <summary>
+            Map domain object properties to transport object properties.
+            </summary>
+            <param name="domainObject">The domain object to map.</param>
+            <returns>A transport object with properties mapped from the domain object.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRepositoryMapper`2.CopyDomainProperties(`0,`0)">
+            <summary>
+            Copies properties from one domain object to a second domain object.
+            </summary>
+            <param name="cachedObject">The domain object that will receive property values from resultObject.</param>
+            <param name="resultObject">The domain object whose properties will be mapped to cachedObject.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.CreateMappers">
+            <summary>
+            Initialize property mappers. By default, properties that share the same name will be mapped.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.CustomTransportToDomainMapper(AutoMapper.IMappingExpression{`1,`0})">
+            <summary>
+            Overrideable function to provide custom mapping logic when mapping from transport to domain object.
+            </summary>
+            <param name="mapper">The mapping expression object to which custom mapping logic can be added.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.CustomDomainToTransportMapper(AutoMapper.IMappingExpression{`0,`1})">
+            <summary>
+            Overrideable function to provide custom mapping logic when mapping from domain to transport object.
+            </summary>
+            <param name="mapper">The mapping expression object to which custom mapping logic can be added.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.CustomDomainToDomainMapper(AutoMapper.IMappingExpression{`0,`0})">
+            <summary>
+            Overrideable function to provide custom mapping logic when mapping from one domain to another domain object.
+            </summary>
+            <param name="mapper">The mapping expression object to which custom mapping logic can be added.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.TranslateToDomain(`1)">
+            <summary>
+            Map transport object properties to domain object properties.
+            </summary>
+            <param name="transportObject">The transport object to map.</param>
+            <returns>A domain object with proprties mapped from the transport object.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.TranslateFromDomain(`0)">
+            <summary>
+            Map domain object properties to transport object properties.
+            </summary>
+            <param name="domainObject">The domain object to map.</param>
+            <returns>A transport object with properties mapped from the domain object.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.DefaultRepositoryMapper`2.CopyDomainProperties(`0,`0)">
+            <summary>
+            Copies properties from one domain object to a second domain object.
+            </summary>
+            <param name="cachedObject">The domain object that will receive property values from resultObject.</param>
+            <param name="resultObject">The domain object whose properties will be mapped to cachedObject.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IEzeModule">
+            <summary>
+            This interface contains information about a module.
+            It is to be implemented in a class with the ModuleExport attribute.
+            There should only be one such class per product.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IEzeModule.ProductName">
+            <summary>
+            The localized name of the module.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileFactory">
+            <summary>
+            An interface to be implemented in a class that handles tile registration. This class must be exported via MEF as an ITileFactory.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileFactory.Initialize(System.IServiceProvider)">
+            <summary>
+            Registers tiles contained in a module with the ITileManagerService.
+            </summary>
+            <param name="serviceProvider">A service provider which can be used to get an instance of the ITileManagerService, or any other necessary services.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.WidgetSize">
+            <summary>
+            Widget size options.
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.WidgetSize.Small">
+            <summary>
+            1x1
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.WidgetSize.Wide">
+            <summary>
+            1x2
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.WidgetSize.Tall">
+            <summary>
+            2x1
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.WidgetSize.Large">
+            <summary>
+            2x2
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData">
+            <summary>
+            Class that contains information about a Dashboard widget
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData.WidgetName">
+            <summary>
+            The name of the widget.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData.RegionName">
+            <summary>
+            The region name that will couple the view model with the view. The view must be exported with the ViewExport attribute and this region name.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData.WidgetSize">
+            <summary>
+            The default size of the widget.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData.Permissions">
+            <summary>
+            The permissions that determine whether or not this widget will be shown to the user on the Dashboard.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.IDashboardFactory">
+            <summary>
+            Contains an initialization function which will register Dashboard widgets.
+            </summary>
+            <remarks>
+            A class that implements IDashboardFactory must export it as such:
+            [Export(typeof(IDashboardFactory))]
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.IDashboardFactory.Initialize(System.IServiceProvider)">
+            <summary>
+            A function called by the Dashboard to register entries.
+            </summary>
+            <param name="serviceProvider">
+            An IServiceProvider which will provide access to an IDashboardService.
+            </param>
+            <example>
+            public void Initialize(IServiceProvider serviceProvider)
+            {
+            	var dashboardService = serviceProvider.GetService&lt;IDashboardService&gt;();
+            	dashboardService.Register(...);
+            }
+            </example>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.IDashboardService">
+            <summary>
+            Interface used to retrieve a service which allows for the registration of Dashboard widgets.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.IDashboardService.Register(Eze.Ims.Platform.Desktop.Framework.Api.Dashboard.DashboardWidgetData,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            Adds a widget to the Dashboard
+            </summary>
+            <param name="widgetData">DashboardWidgetData object containing information about this widget.</param>
+            <param name="getVmFunc">Function that returns an instance of the widget view mode.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryCategory">
+            <summary>
+            The category under which a Data Library entry is to be displayed.
+            These categories are currently displayed as vertical list on the far left of the Data Library.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry">
+            <summary>
+            Contains registration data for a Data Library entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.Category">
+            <summary>
+            The category under which this entry will be displayed.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.DataTypeNameAccessText">
+            <summary>
+            The text that will be displayed in the data type list.
+            </summary>
+            <remarks>
+            This should be access text so it can be easily accessed via the keyboard.
+            </remarks>
+            <example>
+            "_Users"
+            </example>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.RegionName">
+            <summary>
+            The region name of the view being exported as the editor view.
+            </summary>
+            <remarks>
+            This must match the string in the view's ViewExport attribute.
+            </remarks>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.Permissions">
+            <summary>
+            The required CRUD permissions for this data type.
+            </summary>
+            <remarks>
+            This will control whether a user is able to create, read, edit, or delete records of this type.
+            </remarks>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.ListItemDataTemplate">
+            <summary>
+            The DataTemplate to be used to display each DataRecord in the record list.
+            </summary>
+            <remarks>
+            This field is optional. If a DataTemplate is not provided here, the default template (DisplayName) will be used.
+            </remarks>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.IsPermissionedOnCategory">
+            <summary>
+            Determines where the permissions are based on the Category not the DataTypeNameAccessText
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry.NavigationPath">
+            <summary>
+            Path name to use in an application URI to navigate to this category of records.
+            </summary>
+            <remarks>
+            This field is optional. If null, RegionName will be used as the navigation path.
+            </remarks>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryFactory">
+            <summary>
+            Contains an initialization function which will register Data Library entries.
+            </summary>
+            <remarks>
+            A class that implements IDataLibraryFactory must export it as such:
+            [Export(typeof(IDataLibraryFactory)), PartCreationPolicy(CreationPolicy.Shared)]
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryFactory.Initialize(System.IServiceProvider)">
+            <summary>
+            A function called by the Data Library to register entries.
+            </summary>
+            <param name="serviceProvider">
+            An IServiceProvider which will provide access to an IDataLibraryService.
+            </param>
+            <see cref="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IAsyncDataLibraryFactory.InitializeAsync(System.IServiceProvider)"/>
+            <example>
+            public void Initialize(IServiceProvider serviceProvider)
+            {
+            	var dataLibraryService = serviceProvider.GetService&lt;IDataLibraryService&gt;();
+            	dataLibraryService.Register(...);
+            }
+            </example>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IAsyncDataLibraryFactory">
+            <summary>
+            Contains the async version of the initialization function which will register Data Library entries.
+            </summary>
+            <remarks>
+            A class that implements IDataLibraryFactory must export it as such:
+            [Export(typeof(IAsyncDataLibraryFactory)), PartCreationPolicy(CreationPolicy.Shared)]
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IAsyncDataLibraryFactory.InitializeAsync(System.IServiceProvider)">
+            <summary>
+            A function called by the DataLibrary to register entries.
+            </summary>
+            <param name="serviceProvider">
+            An IServiceProvider which will provide access to an IDataLibraryService.
+            </param>
+            <example>
+            <code>
+            public async Task Initialize(IServiceProvider serviceProvider)
+            {
+            	var dataLibraryService = serviceProvider.GetService&lt;IDataLibraryService&gt;();
+            	dataLibraryService.Register(...);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryService.Register``1(Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.DataLibraryEntry,System.Func{System.IServiceProvider,Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryViewModel},System.Func{System.IServiceProvider,Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryCrud{``0}})">
+            <summary>
+            Adds an entry to the Data Library.
+            </summary>
+            <typeparam name="T">
+            The data type. This type must inherit from DataRecord.
+            </typeparam>
+            <param name="entryInfo">
+            A DataLibraryEntry object containing information about this Data Library entry.
+            </param>
+            <param name="getVmFunc">
+            A function that returns a new instance of an IDataLibraryViewModel.
+            The provided IServiceProvider can be used to retrieve any of the services the viewmodel needs.
+            </param>
+            <param name="getCrudFunc">
+            A function that returns an instance of an IDataLibraryCrud.
+            The provided IServiceProvider can be used to retrieve any of the services this class needs (or the class itself, if necessary).
+            </param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryService.GetDataPermissions">
+            <summary>
+            Gets data permissions for all entries registered with the Data Library.
+            </summary>
+            <returns>
+            A Dictionary with data type name as the key, and CRUD permission information as the value.
+            </returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IHaveHistory">
+            <summary>
+            Indicates that the given DataLibrary member has history information to display
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IHaveHistory.HistoryContent">
+            <summary>
+            History Content ViewModel 
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IHaveHistory.HistoryRegionName">
+            <summary>
+            History Content Region
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryViewModel.HandleDataLibrarySelection">
+            <summary>
+            A function called when this IDataLibraryViewModel's DataRecord has been selected in the Data Library.
+            </summary>
+            <remarks>
+            If this record needs to retrieve any additional data from the cloud that has not been retrieved yet, this function is when that can be done.
+            </remarks>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDataLibraryViewModel.DataRecord">
+            <summary>
+            This IDataLibraryViewModel's DataRecord. 
+            </summary>
+            <remarks>
+            Each instance of IDataLibraryViewModel will have its own DataRecord.
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataLibrary.IDependentDataLibraryViewModel.GetDependenciesAsync">
+            <summary>
+            This IDataLibraryViewModel's DataRecord. 
+            </summary>
+            <remarks>
+            Each instance of IDataLibraryViewModel will have its own DataRecord.
+            </remarks>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.FeatureToggle.FeatureToggleBase">
+            <summary>
+            Baseclass for feature toggles. Inherit from this class and implement individual feature toggle per product or module, and add toggle fields as needed to each implementation.
+            
+            There should be only a very limited number of toggle fields in each product, as it is meant to "temporarily disable" work in progress features that are not ready to deploy. 
+            As features are deployed, remove the toggle fields from each feature toggle instance, including related toggle checking logic.
+            (See Eze.Ims.Platform.Desktop.Framework.FrameworkFeatureToggle for example)
+            </summary>
+            <remarks>
+            Here are the guidelines recommended by the platform team:
+            - If you have more than 4 toggles defined for your product (team), you are doing it wrong. Finish one and remove the toggle before you introduce a new one.
+            - Keep feature toggles as coarse and high-level as possible. 
+            - Whenever possible, toggle the UI access to a feature, not the underlying logic. 
+            - Leave a comment with dates when a feature toggle was introduced and when it is expected to be removed. 
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.FeatureToggle.FeatureToggleBase.GetFeatureToggle(System.String,System.String)">
+            <summary>
+            Get FeatureToggle value based on input namespace and key. 
+            Feature keys are stored under HKCU: {ImsRoot}\FeatureToggles\{FeatureNamespace}\{FeatureKey}
+            </summary>
+            <param name="featureNamespace">namespace where the feature belongs to</param>
+            <param name="featurekey">feature key</param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.IResourceClientFactory">
+            <summary>
+            Service provided by the framework to create a new ResourceClient with the default CommunicationProvider
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.IResourceClientFactory.Create``1">
+            <summary>
+            Creates a new instance of ResourceClient to be used with REST APIs
+            </summary>
+            <typeparam name="TResource">The type resource object for this API</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.ITitleBarService">
+            <summary>
+            Application title bar service
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.ITitleBarService.AddCommandItem(Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem)">
+            <summary>
+            Adds a TitleBarCommandItem to the TitleBar.
+            </summary>
+            <param name="commandItem"></param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.ITitleBarService.RemoveCommandItem(Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem)">
+            <summary>
+            Removes a TitleBarCommandItem to the TitleBar.
+            </summary>
+            <param name="commandItem"></param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.ITitleBarService.CommandItems">
+            <summary>
+            List of TitleBarCommandItems
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService">
+            <summary>
+            Implementations of this will be able to provide Web endpoint addresses in the IMS cloud space.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService.GetResourceWebApiEndpoint(System.String,System.String,System.String)">
+            <summary>
+            Gets the RESTfull WebApi end point for the product
+            </summary>
+            <param name="productName">The IMS Product to which the given resource belongs</param>
+            <param name="resourceName">The name of the repource</param>
+            <param name="version">The version of the Api</param>
+            <returns>The REST Api endpoint for the Resource</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService.GetProductWebAppBaseUri(System.String)">
+            <summary>
+            Get the product's WebApplication baseUrl
+            </summary>
+            <param name="productName">Name of the product</param>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService.GatewayUri">
+            <summary>
+            Gets the Users GatewayUri
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService.WebApiBaseUri">
+            <summary>
+            Gets the BaseUri of the RESTful WebApi for the user
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.IWebEndPointsService.WebAppBaseUri">
+            <summary>
+            Gets the BaseUri of the WebApplications for the current user
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IWorkflowManager">
+            <summary>
+            This class will be used for registration of configurable workflows and workflow steps
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem">
+            <summary>
+            Title bar command item (appears on the left of title bar)
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.#ctor(System.String,System.String,System.Windows.Input.ICommand,Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType,System.String)">
+            <summary>
+            Constructs a new instances of an TitleBarCommandItem
+            </summary>
+            <param name="name"></param>
+            <param name="caption"></param>
+            <param name="command"></param>
+            <param name="itemType"></param>
+            <param name="iconResourceKey"></param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.#ctor(System.String,System.String,System.Windows.Input.ICommand,Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType,System.String,System.Int32)">
+            <summary>
+            Constructs a new instances of an TitleBarCommandItem with SortOrder
+            </summary>
+            <param name="name"></param>
+            <param name="caption"></param>
+            <param name="command"></param>
+            <param name="itemType"></param>
+            <param name="iconResourceKey"></param>
+            <param name="sortOrder"></param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.#ctor(System.String,System.String,System.Windows.Input.ICommand,Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType,System.String,System.Int32,System.Collections.Generic.List{Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem})">
+            <summary>
+            Constructs a new instances of an TitleBarCommandItem with SortOrder
+            </summary>
+            <param name="name"></param>
+            <param name="caption"></param>
+            <param name="command"></param>
+            <param name="itemType"></param>
+            <param name="iconResourceKey"></param>
+            <param name="sortOrder"></param>
+            <param name="childCommandItems"></param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.Name">
+            <summary>
+            Gets the internal name of the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.Caption">
+            <summary>
+            Gets or sets the caption to display on the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.Command">
+            <summary>
+            Gets or sets the command to use when the user invokes the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.ItemType">
+            <summary>
+            Gets or sets the Item type
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.IconResourceKey">
+            <summary>
+            Gets or sets the Item type
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.SortOrder">
+            <summary>
+            Gets or sets the sort position for the ribbon entry
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItem.ChildCommandItems">
+            <summary>
+            Child CommandItems. Only one child-level is supported.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType">
+            <summary>
+            Type of the TitleBarCommandItem.
+            </summary>
+            <remarks>The type dictates where the command is placed on the TitleBar. ApplicationCommand -> Left, and CustomCommand -> Right.
+            </remarks>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType.ApplicationCommand">
+            <summary>
+            Main application command items (Saving Desktop, etc.)
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Framework_Service_Interfaces.TitleBarCommandItemType.CustomCommand">
+            <summary>
+            Custom command items
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea">
+            <summary>
+            Options for what areas of the Eze IMS can be navigated to
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea.Tile">
+            <summary>Workroom Tile</summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea.DataLibrary">
+            <summary>Data Library</summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea.Hud">
+            <summary>HUD Display</summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities">
+            <summary>
+            Class containing Uri helper functions
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.CreateApplicationUri(Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea,System.String)">
+            <summary>
+            Creates a Uri properly formatted for Eze IMS navigation
+            </summary>
+            <param name="systemArea">The area of the IMS to navigate to</param>
+            <param name="target">The name of the target to navigate to</param>
+            <returns>A Uri properly formatted for Eze IMS navigation</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.CreateApplicationUri(Eze.Ims.Platform.Api.SystemTargetArea,System.String)">
+            <summary>
+            Creates a Uri properly formatted for Eze IMS navigation
+            </summary>
+            <param name="systemArea">The area of the IMS to navigate to</param>
+            <param name="target">The name of the target to navigate to</param>
+            <returns>A Uri properly formatted for Eze IMS navigation</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.CreateApplicationUri(Eze.Ims.Platform.Desktop.Framework.Api.Navigation.SystemArea,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Creates a Uri properly formatted for Eze IMS navigation
+            </summary>
+            <param name="systemArea">The area of the IMS to navigate to</param>
+            <param name="target">The name of the target to navigate to</param>
+            <param name="queryParameters">Uri query parameters</param>
+            <returns>A Uri properly formatted for Eze IMS navigation</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.CreateApplicationUri(Eze.Ims.Platform.Api.SystemTargetArea,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Creates a Uri properly formatted for Eze IMS navigation
+            </summary>
+            <param name="systemArea">The area of the IMS to navigate to</param>
+            <param name="target">The name of the target to navigate to</param>
+            <param name="queryParameters">Uri query parameters</param>
+            <returns>A Uri properly formatted for Eze IMS navigation</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.GetQueryParameters(System.Uri)">
+            <summary>
+            Gets the query parameters from a Uri
+            </summary>
+            <param name="uri">The Uri from which to retrieve the query parameters</param>
+            <returns>A Dictionary containing key/value pairs of query parameters</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.UriUtilities.AddQueryParameter(System.UriBuilder,System.String,System.String)">
+            <summary>
+            Adds a query parameter to a Uri
+            </summary>
+            <param name="uriBuilder">The UriBuilder to add the query parameter to</param>
+            <param name="key">The key of the Uri parameter</param>
+            <param name="value">The value of the Uri parameter</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationAware">
+            <summary>
+            Interface that when implemented in a view model can react to navigation requests
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationAware.CanAcceptNavigation(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Determine whether this object instance can accept the navigation request
+            </summary>
+            <param name="navigationParameters">Navigation query key/value pairs</param>
+            <returns>Boolean specifying whether this object instance can accept the navigation request</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationAware.OnNavigation(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Called when this object instance has been navigated to.
+            </summary>
+            <param name="navigationParameters">Navigation query key/value pairs</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationService">
+            <summary>
+            Service allowing for navigation throughout the Eze IMS
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationService.CanNavigate(System.Uri)">
+            <summary>
+            Determines whether the Uri target can be navigated to
+            </summary>
+            <param name="uri">The Uri to navigate to</param>
+            <returns>Boolean specifying whether the Uri target can be navigated to</returns>
+            <remarks>
+            The format of the Uri should be 'ezeims://[System area]/[Target name]?[Query]' 
+            Using the UriUtilities.CreateApplicationUri() function will help you create this.
+            </remarks>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Navigation.INavigationService.Navigate(System.Uri)">
+            <summary>
+            Perform a navigation to the Uri target
+            </summary>
+            <param name="uri">The Uri to navigate to</param>
+            <remarks>
+            The format of the Uri should be 'ezeims://[System area]/[Target name]?[Query]' 
+            Using the UriUtilities.CreateApplicationUri() function will help you create this.
+            </remarks>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Security.WorkflowPermissionRequirement">
+            <summary>
+            The number of workflow IDs that must match what the user has permission for to be entitled to this workflow.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Security.WorkflowPermission">
+            <summary>
+            A class used to determine whether or not the user has permission for a given workflow.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Security.WorkflowPermission.HasPermission(Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IUserInfo)">
+            <summary>
+            Determine whether the current user has permission for this workflow.
+            </summary>
+            <param name="userInfo">A user info instance.</param>
+            <returns>Boolean indicating whether the current user has permission for this workflow.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Shell.IStatusBarManager.SetStatus(System.String,Eze.Ims.Platform.Desktop.Framework.Api.Shell.ProgressType)">
+            <summary>
+            Sets a new status message in the statusbar
+            </summary>
+            <param name="message">The message shown while status is in progress</param>
+            <param name="progressType">Type of Status Message</param>
+            <returns>An IStatusHandle, which can be used to update progress to or complete the status</returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Shell.IStatusHandle">
+            <summary>
+            When setting a StatusBar message, you can use returned StatusHandle to update progress and inidcate completion of a long-running action.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Shell.IStatusHandle.UpdateStatus(System.Double)">
+            <summary>
+            Set the progress bar in the StatusBar to a specific value (0-100)
+            </summary>
+            <param name="percentage">Percentage between 0-100</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Shell.IStatusHandle.UpdateStatus(System.String,System.Nullable{System.Double})">
+            <summary>
+            Set the message in the StatusBar
+            </summary>
+            <param name="message">Message to display</param>
+            <param name="percentage">Percentage between 0-100</param>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Shell.ProgressType.None">
+            <summary>
+            No ProgressBar
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Shell.ProgressType.Indefinite">
+            <summary>
+            Indefinite ProgressBar
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Shell.ProgressType.Percentage">
+            <summary>
+            A ProgressBar whose progress value can be updated
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.TileFiltering.FilterArgs">
+            <summary>
+            Contains filters selected for a tile.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.TileFiltering.FilterArgs.FilterExpression">
+            <summary>
+            A filter expression object representing all selected user-created custom filters for the tile.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.TileFiltering.FilterArgs.AdditionalFilters">
+            <summary>
+            A list of additional filters that do not appear in the tile's available filter list.
+            Filters can be added manually to this list and will appear in the tile's selected filter list.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITilePermission">
+            <summary>
+            An interface used to determine whether or not the user has permission to see a given tile.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITilePermission.HasPermission(System.IServiceProvider)">
+            <summary>
+            Determines whether or not a user has permission to see a given tile.
+            </summary>
+            <param name="serviceProvider">A service provider instance.</param>
+            <returns>A boolean indicating whether or not the user has permissions for this tile.</returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileManagerService">
+            <summary>
+            A service interface that provides the ability to register tiles with the system.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileManagerService.Register(Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            Registers a tile with the application.
+            </summary>
+            <param name="tileMetadata">An object containing information about tile to be shown in the Tile Gallery.</param>
+            <param name="getVmFunc">
+            A function that returns an instance of the tile view model.
+            A service provider is provided for the view model to retrieve any services it may need.
+            </param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata">
+            <summary>
+            Interface that contains information about a tile, including Tile Gallery display information, permissions, and region name for view-view model coupling.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.TileName">
+            <summary>
+            The name of the tile to be shown in the Tile Gallery.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.Category">
+            <summary>
+            The category under which the tile will appear in the Tile Gallery.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.TileImagePath">
+            <summary>
+            The image that will be shown for this tile in the Tile Gallery.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.RegionName">
+            <summary>
+            The region name that will couple the view model with the view. The view must be exported with the ViewExport attribute and this region name.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.NavigationPath">
+            <summary>
+            Path that can be used by the navigation service to find this tile. Should be of the format '[product name]/[tile name]'.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.TilePermissions">
+            <summary>
+            The permissions that determine whether or not the tile will be shown to the user in the Tile Gallery.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.ITileMetadata.Permissions">
+            <summary>
+            The permissions that determine whether or not the tile will be shown to the user in the Tile Gallery.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.AbstractApplicationViewService`4.CopyDomainProperties(`0,`0)">
+            <summary>
+            Copy the properties of a domain result of a method call to the cached equivalent.
+            </summary>
+            <param name="cachedObject">Cached domain object to be updated.</param>
+            /// <param name="resultObject">Domain object that is a result of a method call.</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.CreateModel">
+            <summary>
+            Creates a model of Type T
+            </summary>
+            <returns>Domain object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.TranslateToDomain(`1)">
+            <summary>
+            Method that translates a transport object to a domain object
+            </summary>
+            <param name="transportObject">Input transport object</param>
+            <returns>The resulting domain object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.TranslateFromDomain(`0)">
+            <summary>
+            Method that translates a domain object to a transport object
+            </summary>
+            <param name="domainObject">Input domain object</param>
+            <returns>The resulting transport object</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.SaveRecordOrderAsync(Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.ITrackingObservableCollection)">
+            <summary>
+            Asynchronously save the order of a list of records.
+            </summary>
+            <param name="domainObjectCollection">List of records to save the order of.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.DeleteRecordAsync(`0)">
+            <summary>
+            Delete a record and remove it from the repository's live collection. Uses the Abstract DeleteRecord method to perform service communication.
+            </summary>
+            <param name="domainObject">Domain object to be deleted.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.CopyDomainProperties(`0,`0)">
+            <summary>
+            Copy the properties of a domain result of a method call to the cached equivalent.
+            </summary>
+            <param name="cachedObject">Cached domain object to be updated.</param>
+            /// <param name="resultObject">Domain object that is a result of a method call.</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.DoGetRecordsAsync">
+            <summary>
+            Retrieve an enumerable list of the domain objects through the communication layer.
+            </summary>
+            <returns>IEnumerable&lt;TDomain&gt;</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.DoSaveRecordAsync(`0)">
+            <summary>
+            Save or update a record using the communication layer.
+            </summary>
+            <param name="record">Domain object to be saved.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.DoDeleteRecordAsync(`0)">
+            <summary>
+            Delete a record using the communication layer.
+            </summary>
+            <param name="record">Domain object to be deleted.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.DoSaveRecordOrderAsync(System.String)">
+            <summary>
+            Save the record order using the communication layer.
+            </summary>
+            <param name="recordIdOrder">string of comma delimited id's put together by SaveRecordOrderAsync.</param>
+            <returns>bool succes</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractRepository`4.HandleResponseAddUpdateGetDomain(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            Transform a return list of Transport objects and return the list of domain objects..
+            </summary>
+            <param name="response">list of Transport objects.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of listed domain lists.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.AbstractDataRecordRepository`4.TranslateToDomain(`1)">
+            <summary>
+            Method that translates a transport object to a domain object
+            </summary>
+            <param name="transportObject">Input transport object</param>
+            <returns>The resulting domain object</returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.BaseViewModel">
+            <summary>
+            A base class to be used for view models which contains property change notification and IDisposable implementations.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.BaseViewModel.Dispose(System.Boolean)">
+            <summary>
+            Overrideable Dispose implementation.
+            </summary>
+            <param name="disposing">True if disposing, false if finalizing.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.BaseViewModel.Dispose">
+            <summary>
+            IDisposable implementation. Suppresses finalization of this object.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.BaseViewModel.Finalize">
+            <summary>
+            Finalizer.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IContainsCustomProperties">
+            <summary>
+            Interface to be implemented on a tile view model indicating that it has custom properties to be saved/loaded with the workspace.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IContainsCustomProperties.CustomProperties">
+            <summary>
+            A dictionary containing custom property keys and values. This will be serialized when the workspace is saved.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.EventTypes.DesktopEventHelper.Register(System.Action{Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.EventTypes.DesktopSavingType},System.Action{Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.EventTypes.DesktopLoadedType},Microsoft.Practices.Prism.PubSubEvents.IEventAggregator)">
+            <summary>
+            Register event handlers for Desktop saving and loaded events.
+            </summary>
+            <param name="savingAction">Desktop saving event handler.</param>
+            <param name="loadedAction">Desktop loaded event handler.</param>
+            <param name="eventAggregator">An IEventAggregator to provide access to desktop events.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.ExceptionDialog">
+            <summary>
+            Dialog for displaying an exception error and stacktrace.
+            	- Call ShowModal() to display this dialog in a modal window.
+            	- Call ShowNonModalAsync() to display this dialog asynchronously in a non-modal window.
+            	- Call ShowEmbeddedAsync(source) to display this dialog embedded in a host View.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel">
+            <summary>
+            Base dialog class for showing dialogs.
+              - To show a custom dialog, extend DialogViewModel and a matching View for it as described here: https://confluence.realtick.com/display/IMS/Dialog+Service
+              - Some general-purpose dialogs are provided by the framework. To use them, simply pass in one of these classes:
+                      * SimpleDialog				- Displays a string and OK button with no icon.  
+                      * ScrollableDialog			- Displays a long string in a scroll container that allows copying the text.  
+                      * ExceptionDialog				- Displays an error message, error icon, and an expandable section for the exception's call stack. 
+                      * InfoDialog (pending)        - Displays a string and OK button and an Info icon.  
+                      * WarningDialog (pending)		- Displays a string and OK button and a warning icon.
+                      * ErrorDialog (pending)	    - Displays an error message, error icon, and an optional expandable section for error message detail. 
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.AddDialogCommand(System.String,System.Action{Eze.Ims.Platform.Desktop.Framework.Api.IDialogCommand})">
+            <summary>
+            Adds dialog command with specific command handler action
+            </summary>
+            <param name="caption"></param>
+            <param name="commandAction"></param>
+            <returns></returns>
+            <example>Use custom action on "Save" command to validate and prevent closing if dialog contains invalid settings.</example>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.AddDialogCommand(System.String)">
+            <summary>
+            Adds dialog command with default Close handler
+            </summary>
+            <param name="caption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.ShowModal">
+            <summary>
+            Show this dialog in a modal window.
+            </summary>
+            <returns>Returns the command used to close this dialog</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.ShowNonModalAsync">
+            <summary>
+            Show this dialog asynchronously in a non-modal window.
+            </summary>
+            <returns>Task that showed this dialog. Task result is the command used to close this dialog</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.ShowEmbeddedAsync(System.Object)">
+            <summary>
+            Show this dialog embedded in the View who's data context is the specified source.
+            </summary>
+            <param name="source">Data context of the target View that will host the embedded dialog</param>
+            <returns>Task that showed this embedded dialog. Task result is the command used to close the dialog</returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel.TargetRegionName">
+            <summary>
+            The name of the UI region that will be bound to this ViewModel.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.ExceptionDialog.#ctor(System.String,System.Exception)">
+            <summary>
+            Create an ExceptionDialog
+            </summary>
+            <param name="message">User-friendly message</param>
+            <param name="exception">exception</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.ExceptionDialogView">
+            <summary>
+            Interaction logic for ExceptionDialogView.xaml
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.ExceptionDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.ScrollableDialog">
+            <summary>
+            Dialog for displaying a scrollable message.
+            	- Call ShowModal() to display this dialog in a modal window.
+            	- Call ShowNonModalAsync() to display this dialog asynchronously in a non-modal window.
+            	- Call ShowEmbeddedAsync(source) to display this dialog embedded in a host View.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.ScrollableDialog.#ctor(System.String)">
+            <summary>
+            Creates a ScrollableDialog
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.ScrollableDialogView">
+            <summary>
+            Interaction logic for ScrollableDialogView.xaml
+            </summary>
+            <summary>
+            ScrollableDialogView
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.ScrollableDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.SimpleDialog">
+            <summary>
+            Dialog for displaying a simple message.
+            	- Call ShowModal() to display this dialog in a modal window.
+            	- Call ShowNonModalAsync() to display this dialog asynchronously in a non-modal window.
+            	- Call ShowEmbeddedAsync(source) to display this dialog embedded in a host View.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.SimpleDialog.#ctor(System.String)">
+            <summary>
+            Create a simple message dialog.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.SimpleDialogView">
+            <summary>
+            Interaction logic for SimpleDialogView.xaml
+            </summary>
+            <summary>
+            SimpleDialogView
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.SimpleDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.FilterEditor.FilterEditorDialogView">
+            <summary>
+            Interaction logic for FilterEditorDialogView.xaml
+            </summary>
+            <summary>
+            FilterEditorDialogView
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.FilterEditor.FilterEditorDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRibbonCommandAwareTile">
+            <summary>
+            Interface to be implemented on a tile view model indicating that the tile has ribbon commands to be activated when the tile is focused.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRibbonCommandAwareTile.OnActivate">
+            <summary>
+            A function called when the tile has become focused. Ribbon commands are activated in this function.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRibbonCommandAwareTile.OnDeactivate">
+            <summary>
+            A function called when the tile has lost focus. Ribbon commands are deactivated in this function.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IRibbonCommandAwareTile.RibbonCommands">
+            <summary>
+            A collection of commands to be added to the ribbon when the tile is focused.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem">
+            <summary>
+            Represents an application menu item used on the ribbon
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.#ctor(System.String)">
+            <summary>
+            Constructs a new instances of an ApplicationMenuItem
+            </summary>
+            <param name="name">The internal name of the menu item</param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.Name">
+            <summary>
+            Gets the internal name of the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.Caption">
+            <summary>
+            Gets or sets the caption to display on the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.Command">
+            <summary>
+            Gets or sets the command to use when the user invokes the menu item
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.AuxiliaryPaneContent">
+            <summary>
+            Gets or sets the data context for a ribbon backstage view
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.TargetRegionName">
+            <summary>
+            Gets or sets the region name for a ribbon backstage entry. Used for view-view model coupling
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem.SortOrder">
+            <summary>
+            Gets or sets the sort position for the ribbon entry
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail">
+            <summary>
+            A class that contains additional details for an audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail.ObjectName">
+            <summary>
+            Name of the relevant object referenced by the audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail.ObjectType">
+            <summary>
+            Type of the relevant object reference by the audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail.Field">
+            <summary>
+            Field of the object that changed for this audit entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail.OldValue">
+            <summary>
+            Old value of the field that changed for this audit entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditDetail.NewValue">
+            <summary>
+            New value of the field that changed for this audit entry.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem">
+            <summary>
+            A class containing audit trail entry information.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Id">
+            <summary>
+            The ID of this entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.RequestId">
+            <summary>
+            The server request ID.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.CreatedAt">
+            <summary>
+            The time that this audit entry was created.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.CreatedDate">
+            <summary>
+            The date that this audit trail entry was created.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.UserId">
+            <summary>
+            The ID of the user that made the action that this audit trail entry represents.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.UserName">
+            <summary>
+            The name of the user that made the action that this audit trail entry represents.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Category">
+            <summary>
+            The category of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Subcategory">
+            <summary>
+            The subcategory of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Topic">
+            <summary>
+            The topic of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Operation">
+            <summary>
+            The data operation of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.EntityKey">
+            <summary>
+            The entity key of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.EntityTypeName">
+            <summary>
+            The entity type name of this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Message">
+            <summary>
+            The message for this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.Details">
+            <summary>
+            A collection of additional details for this audit trail entry.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.HasDetails">
+            <summary>
+            A boolean specifying whether or not this audit entry has additional details.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.AuditItem.DetailsRetrieved">
+            <summary>
+            A boolean specifying whether or not additional details have been retrieved from the server for this audit entry.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem">
+            <summary>
+            A class representing a command item that can be added to the Ribbon.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.#ctor(System.String,System.String,System.String,System.String,System.Windows.Input.ICommand,System.Windows.Controls.Image,Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItemStyle,System.String,System.Int32)">
+            <summary>
+            CommandLibraryItem constructor.
+            </summary>
+            <param name="viewName">The ribbon view name.</param>
+            <param name="tabName">The ribbon tab name.</param>
+            <param name="groupName">The ribbon group name.</param>
+            <param name="caption">The command button caption.</param>
+            <param name="command">The command executed when the ribbon button is clicked.</param>
+            <param name="glyph">The image that will appear on the command button.</param>
+            <param name="style">The size of the command button.</param>
+            <param name="keyGestures">The keyboard shortcut for this command button.</param>
+            <param name="priority">The priority order in which the command button will appear within its ribbon group.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.GetGeometryImage(System.String)">
+            <summary>
+            Gets a ribbon button image from a geometry resource.
+            </summary>
+            <param name="geometryResourceName">Name of the geometry resouce.</param>
+            <returns>A ribbon button image from the supplied geometry resource.</returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.ViewName">
+            <summary>
+            Gets or sets the ribbon view name.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.TabName">
+            <summary>
+            Gets or sets the name of the ribbon tab under which this command button will appear.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.GroupName">
+            <summary>
+            Gets or sets the name of the ribbon group in which this command button will appear.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.Caption">
+            <summary>
+            Gets or sets the command button caption.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.Command">
+            <summary>
+            Gets or sets the command to be executed when the command button is clicked.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.Glyph">
+            <summary>
+            Gets or sets the image that will appear on the command button.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.Style">
+            <summary>
+            Gets or sets the command button size.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.KeyGestures">
+            <summary>
+            Gets or sets the keyboard shortcut for this command button.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.Priority">
+            <summary>
+            Gets or sets an integer determining the priority order in which the command button will appear within its ribbon group.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.GroupPriority">
+            <summary>
+            Gets or sets an integer determining the priority order in which this command button's group will appear in the ribbon.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem.TabPriority">
+            <summary>
+            Gets or sets an integer determining the priority order in which this command button's tab will appear in the ribbon.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItemStyle">
+            <summary>
+            Ribbon button size options.
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItemStyle.SmallWithText">
+            <summary>
+            Small ribbon button.
+            </summary>
+        </member>
+        <member name="F:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItemStyle.Large">
+            <summary>
+            Large ribbon button.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.TypeCollection`1.Name">
+            <summary>
+            This is needed for searching user groups when setting up Role Members and Support Teams
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditor">
+            <summary>
+            CollectionEditor
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditor.#ctor">
+            <summary>
+            CollectionEditor constructor.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditorViewModel">
+            <summary>
+            A view model to be used as the data context of a CollectionEditor control.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditorViewModel.#ctor">
+            <summary>
+            CollectionEditorViewModel constructor.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditorViewModel.EditingCollection">
+            <summary>
+            The TypeCollection to be edited using the CollectionEditor.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditorViewModel.RequestingData">
+            <summary>
+            A function called when typing in the search box to request data.
+            Input: search string. Output: a Task that returns a list of search results.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionEditorViewModel.CollectionMembers">
+            <summary>
+            The members of the current collection for display in the lower ListBox.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionSearchConverter">
+            <summary>
+            A converter which adds text, if necessary, notifying the user that a collection member
+            is already indcluded in this collection as part of another child collection.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionSearchConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Given a collection member and list of child collections, searches for the collection member and adds text to the list item if necessary.
+            </summary>
+            <param name="values">values[0]: the selected collection member. values[1]: other child collections to search for this member.</param>
+            <param name="targetType">Return type.</param>
+            <param name="parameter">Converter parameter.</param>
+            <param name="culture">Current culture.</param>
+            <returns>A string containing the collection member name, along with the list of other child collections it belongs to (if necessary).</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.CollectionEditor.CollectionSearchConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not implemented.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.DataGrid.IMSXamDataGridPersistHelper">
+            <summary>
+            In addition to the functionality of XamDataGridPersistHelper, this class listens for the desktop load/save 
+            events and Loads/Saves the grid state in response.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.DataGrid.IMSXamDataGridPersistHelper.#ctor(Eze.Ims.Platform.Desktop.Framework.Api.Base_Classes_and_Interfaces.IContainsCustomProperties,System.String,Microsoft.Practices.Prism.PubSubEvents.IEventAggregator)">
+            <summary>
+            IMSXamDataGridPersistHelper constructor.
+            </summary>
+            <param name="container">A tile view model instance that contains a custom properties dictionary.</param>
+            <param name="customDataKey">The custom properties dictionary key to which grid customizations will be saved.</param>
+            <param name="eventAggregator">An IEventAggretator to provide access to desktop saving and loaded events.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService.ShowMessage(System.String,Eze.Ims.Platform.Desktop.Framework.Api.Common.MessageBoxType,System.Windows.MessageBoxButton,Eze.Ims.Platform.Desktop.Framework.Api.Common.MessageVisualScope)">
+            <summary>
+            Display a message to the user.
+            </summary>
+            <param name="message">The message to display.</param>
+            <param name="messageBoxType">Information, Confirmation, or Error. Should we use the standard System.Windows.MessageBoxImage enum instead?</param>
+            <param name="buttons">The button or set of buttons to display.</param>
+            <param name="visualScope">Visual scope for displaying the message: Application, Workroom, Tile. Default is Application.</param>
+            <returns>MessageBoxResult that specifies which button the user clicked.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService.ShowMessage(Eze.Ims.Platform.Desktop.Framework.Api.BaseClasses.BaseViewModel,System.String,Eze.Ims.Platform.Desktop.Framework.Api.Common.MessageBoxType,System.Windows.MessageBoxButton,Eze.Ims.Platform.Desktop.Framework.Api.Common.MessageVisualScope)">
+            <summary>
+            Display a message to the user.
+            </summary>
+            <param name="source">ViewModel where the message originated.</param>
+            <param name="message">The message to display.</param>
+            <param name="messageBoxType">Information, Confirmation, or Error. Should we use the standard System.Windows.MessageBoxImage enum instead?</param>
+            <param name="buttons">The button or set of buttons to display.</param>
+            <param name="visualScope">Visual scope for displaying the message: Application, Workroom, Tile. Default is Application.</param>
+            <returns>MessageBoxResult that specifies which button the user clicked.</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService.ShowModal(Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel)">
+            <summary>
+            Show a modal dialog.
+              - To show a custom dialog, extend DialogViewModel and a matching View for it as described here: https://confluence.realtick.com/display/IMS/Dialog+Service
+              - Some general-purpose dialogs are provided by the framework. To use them, simply pass in one of these classes:
+                      * SimpleDialog				- Displays a string and OK button with no icon.  
+                      * ScrollableDialog			- Displays a long string in a scroll container that allows copying the text.  
+                      * ExceptionDialog				- Displays an error message, error icon, and an expandable section for the exception's call stack. 
+                      * InfoDialog (pending)        - Displays a string and OK button and an Info icon.  
+                      * WarningDialog (pending)		- Displays a string and OK button and a warning icon.
+                      * ErrorDialog (pending)	    - Displays an error message, error icon, and an optional expandable section for error message detail. 
+            </summary>
+            <param name="dialogViewModel">The ViewModel of the dialog to be displayed.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService.ShowNonModalAsync(Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel)">
+            <summary>
+            Show a non-modal dialog.
+              - To show a custom dialog, extend DialogViewModel and a matching View for it as described here: https://confluence.realtick.com/display/IMS/Dialog+Service
+                      * SimpleDialog				- Displays a string and OK button with no icon.  
+                      * ScrollableDialog			- Displays a long string in a scroll container that allows copying the text.  
+                      * ExceptionDialog				- Displays an error message, error icon, and an expandable section for the exception's call stack. 
+                      * InfoDialog (pending)        - Displays a string and OK button and an Info icon.  
+                      * WarningDialog (pending)		- Displays a string and OK button and a warning icon.
+                      * ErrorDialog (pending)	    - Displays an error message, error icon, and an optional expandable section for error message detail. 
+            </summary>
+            <param name="dialogViewModel">The ViewModel of the dialog to be displayed.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.IDialogService.ShowEmbeddedAsync(Eze.Ims.Platform.Desktop.Framework.Api.DialogViewModel,System.Object)">
+            <summary>
+            Show a dialog embedded dialog.
+              - To show a custom dialog, extend DialogViewModel and a matching View for it as described here: https://confluence.realtick.com/display/IMS/Dialog+Service
+                      * SimpleDialog				- Displays a string and OK button with no icon.  
+                      * ScrollableDialog			- Displays a long string in a scroll container that allows copying the text.  
+                      * ExceptionDialog				- Displays an error message, error icon, and an expandable section for the exception's call stack. 
+                      * InfoDialog (pending)        - Displays a string and OK button and an Info icon.  
+                      * WarningDialog (pending)		- Displays a string and OK button and a warning icon.
+                      * ErrorDialog (pending)	    - Displays an error message, error icon, and an optional expandable section for error message detail. 
+            </summary>
+            <param name="dialogViewModel">The ViewModel of the dialog to be displayed.</param>
+            <param name="source">ViewModel of the View that will host the dialog.</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IRibbonService">
+            <summary>
+            Data service interface.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IRibbonService.AddApplicationMenuItem(Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem)">
+            <summary>
+            Adds an application menu item to the Ribbon.
+            </summary>
+            <param name="applicationMenuItem">The applicationMenuItem representing this menu item.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IRibbonService.RemoveApplicationMenuItem(Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.ApplicationMenuItem)">
+            <summary>
+            Removes an application menu item to the Ribbon.
+            </summary>
+            <param name="applicationMenuItem">The applicationMenuItem representing this menu item.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IRibbonService.AddRibbonMenuItem(Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem)">
+            <summary>
+            Register a CommandLibraryItem with the ribbon service and place the item in the main application ribbon
+            </summary>
+            <param name="commandLibraryItem">The CommandLibraryItem representing this menu item.</param>
+            <returns>Void</returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IRibbonService.RemoveRibbonMenuItem(Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.CommandLibraryItem)">
+            <summary>
+            Removes a ribbon menu item from the Ribbon.
+            </summary>
+            <param name="commandLibraryItem">The CommandLibraryItem to remove from the Ribbon.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Interfaces.IWindowManager.GetWorkspaceInformation">
+            <summary>
+            Retrieve a list of basic information for all available workspaces.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Language">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Add_Workroom">
+            <summary>
+              Looks up a localized string similar to Add Workroom.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Add_Workspace">
+            <summary>
+              Looks up a localized string similar to Add Workspace.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Administration">
+            <summary>
+              Looks up a localized string similar to Administration.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Agent_Not_Authenticated">
+            <summary>
+              Looks up a localized string similar to Agent not authenticated..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Agent_Not_Found_Message">
+            <summary>
+              Looks up a localized string similar to Agent not found. Please start the Agent and hit OK..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AlertCenter_AlertMessage">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AlertCenter_AlertSubject">
+            <summary>
+              Looks up a localized string similar to Subject.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Appearance">
+            <summary>
+              Looks up a localized string similar to Appearance.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.ApplicationStarting">
+            <summary>
+              Looks up a localized string similar to Starting....
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.ApplicationTitle">
+            <summary>
+              Looks up a localized string similar to Eze IMS.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.ApplicationTitle_Alt">
+            <summary>
+              Looks up a localized string similar to _Eze IMS.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Audit_Item">
+            <summary>
+              Looks up a localized string similar to Audit Item.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditDetail_EzeGridColumn_Field">
+            <summary>
+              Looks up a localized string similar to Field.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditDetail_EzeGridColumn_NewValue">
+            <summary>
+              Looks up a localized string similar to New Value.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditDetail_EzeGridColumn_ObjectName">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditDetail_EzeGridColumn_ObjectType">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditDetail_EzeGridColumn_OldValue">
+            <summary>
+              Looks up a localized string similar to Old Value.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_Date">
+            <summary>
+              Looks up a localized string similar to Date.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Category">
+            <summary>
+              Looks up a localized string similar to Category.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Details">
+            <summary>
+              Looks up a localized string similar to Details.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Entity">
+            <summary>
+              Looks up a localized string similar to Entity.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Id">
+            <summary>
+              Looks up a localized string similar to Id.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Message">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Request_ID">
+            <summary>
+              Looks up a localized string similar to Request ID.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_SubCategory">
+            <summary>
+              Looks up a localized string similar to Sub-Category.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Timestamp">
+            <summary>
+              Looks up a localized string similar to Timestamp.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_Topic">
+            <summary>
+              Looks up a localized string similar to Topic.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_EzeGridColumn_User">
+            <summary>
+              Looks up a localized string similar to Initiated By.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_LastWeekFilter">
+            <summary>
+              Looks up a localized string similar to Occurred LAST WEEK.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.AuditItem_TodayFilter">
+            <summary>
+              Looks up a localized string similar to Occurred TODAY.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Click_To_Start_Capturing">
+            <summary>
+              Looks up a localized string similar to Click To Start Capturing.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Collections">
+            <summary>
+              Looks up a localized string similar to Collections.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Collections_Alt">
+            <summary>
+              Looks up a localized string similar to _Collections.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Content_Types">
+            <summary>
+              Looks up a localized string similar to Content Types.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Copyright">
+            <summary>
+              Looks up a localized string similar to Copyright © 1998-2014.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Copyright_Alt">
+            <summary>
+              Looks up a localized string similar to _Copyright © 1998-2014.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Created">
+            <summary>
+              Looks up a localized string similar to Created:.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Created_By">
+            <summary>
+              Looks up a localized string similar to Created By:.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Custom_Forms">
+            <summary>
+              Looks up a localized string similar to Custom Forms.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Data_Library">
+            <summary>
+              Looks up a localized string similar to Data Library.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.DataDefinitions_Alt">
+            <summary>
+              Looks up a localized string similar to _Data Definitions.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Desktop">
+            <summary>
+              Looks up a localized string similar to Desktop.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Error_LoadResources">
+            <summary>
+              Looks up a localized string similar to Failed to load resources..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Exception_EditingCollectionIsNull">
+            <summary>
+              Looks up a localized string similar to EditingCollection is not set. Please make sure that a EditingCollection was specified for this control..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Hot_Key">
+            <summary>
+              Looks up a localized string similar to Hot Key.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Libraries">
+            <summary>
+              Looks up a localized string similar to Libraries.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Libraries_Alt">
+            <summary>
+              Looks up a localized string similar to _Libraries.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Load">
+            <summary>
+              Looks up a localized string similar to Load.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Loading">
+            <summary>
+              Looks up a localized string similar to Loading.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Modified">
+            <summary>
+              Looks up a localized string similar to Modified:.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Modified_By">
+            <summary>
+              Looks up a localized string similar to Modified By:.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Navigation">
+            <summary>
+              Looks up a localized string similar to Navigation.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Operations">
+            <summary>
+              Looks up a localized string similar to Operations.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.PreferencesLanguage">
+            <summary>
+              Looks up a localized string similar to Language.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.PreferencesTheme">
+            <summary>
+              Looks up a localized string similar to Theme.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Profile_Catalog_Fail_Message">
+            <summary>
+              Looks up a localized string similar to Failed to retrieve profile catalog..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Profile_Catalog_Failure">
+            <summary>
+              Looks up a localized string similar to Profile Catalog Failure.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Record_Details">
+            <summary>
+              Looks up a localized string similar to Record Details.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordMetaDataView_CurrentReadOnlyRecord">
+            <summary>
+              Looks up a localized string similar to Read-only.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordMetaDataView_RecordPropertiesHeaderStringFormat">
+            <summary>
+              Looks up a localized string similar to {0} Properties.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordMetaDataView_Status">
+            <summary>
+              Looks up a localized string similar to Status:.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordStatusCurrent">
+            <summary>
+              Looks up a localized string similar to Current.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordStatusDelete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordStatusEdit">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RecordStatusNew">
+            <summary>
+              Looks up a localized string similar to New.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.RibbonTab_Home">
+            <summary>
+              Looks up a localized string similar to Home.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Save_Failed">
+            <summary>
+              Looks up a localized string similar to Save Failed..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Search_Failed">
+            <summary>
+              Looks up a localized string similar to Search Failed..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Setup">
+            <summary>
+              Looks up a localized string similar to Setup.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Tile_Gallery">
+            <summary>
+              Looks up a localized string similar to Tile Gallery.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.ValidationError_EmptyDisplayName">
+            <summary>
+              Looks up a localized string similar to Name cannot be empty..
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Workflows">
+            <summary>
+              Looks up a localized string similar to Workflows.
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Workroom">
+            <summary>
+              Looks up a localized string similar to Workroom .
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Language.Workspace">
+            <summary>
+              Looks up a localized string similar to Workspace.
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.Framework.Api.Threading.InlineTaskScheduler">
+            <summary>
+            	Provides a task scheduler that runs tasks on the current thread.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Threading.InlineTaskScheduler.QueueTask(System.Threading.Tasks.Task)">
+            <summary>
+            	Runs the provided Task synchronously on the current thread.
+            </summary>
+            <param name="task"> The task to be executed. </param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Threading.InlineTaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)">
+            <summary>
+            	Runs the provided Task synchronously on the current thread.
+            </summary>
+            <param name="task"> The task to be executed. </param>
+            <param name="taskWasPreviouslyQueued"> Whether the Task was previously queued to the scheduler. </param>
+            <returns> True if the Task was successfully executed; otherwise, false. </returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Threading.InlineTaskScheduler.GetScheduledTasks">
+            <summary>
+            	Gets the Tasks currently scheduled to this scheduler.
+            </summary>
+            <returns> An empty enumerable, as Tasks are never queued, only executed. </returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.Framework.Api.Threading.InlineTaskScheduler.MaximumConcurrencyLevel">
+            <summary>
+            	Gets the maximum degree of parallelism for this scheduler.
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.Framework.Api.Threading.UITaskScheduler.Initialize">
+            <summary>
+            Caches the UI Thread's TaskScheduler. 
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when called on a non UI Thread</exception>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="ControlTemplateBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ControlTemplateBrowser" Height="700.187" Width="1300" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <ScrollViewer Name="scrollbar" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ListView Name="listView" Width="200" SelectionChanged="listView_SelectionChanged"></ListView>
+            </ScrollViewer>
+            <TextBox Name="tbTemplate" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" Text="TextBox" Width="1100"/>
+        </StackPanel>
+    </Grid>
+</Window>

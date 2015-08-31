@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApplication5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WpfApplication5"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Resources>
+            <s:String x:Key="k1">Blue</s:String>
+            <s:String x:Key="k2">Red</s:String>
+            <Style TargetType="{x:Type local:UserCont}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Temp}" Value="Blue">
+                        <Setter Property="Color" Value="{StaticResource k2}" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Temp}" Value="Red">
+                        <Setter Property="Color" Value="{StaticResource k1}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <local:UserCont Command="OnClick"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="346,62,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox HorizontalAlignment="Left" Margin="309,184,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Lists}" IsEditable="True" />
+    </Grid>
+</Window>

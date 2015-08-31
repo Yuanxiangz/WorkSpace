@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eze.WpfEx.WebBrowser</name>
+    </assembly>
+    <members>
+        <member name="T:Eze.WpfEx.WebBrowser.EzeWebBrowser">
+            <summary>
+            Interaction logic for EzeWebBrowser.xaml
+            </summary>
+            <summary>
+            EzeWebBrowser
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowser.#ctor">
+            <summary>
+            Creates a new instance of the WebBrowser UserControl
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowser.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel">
+            <summary>
+            The viewmodel 
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.#ctor">
+            <summary>
+            Creates a new instance of EzeWebBrowserViewModel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.ExecuteJavascript(System.String)">
+            <summary>
+            Synchronously executes the given javascript 
+            </summary>
+            <param name="script">The jacvascript to be executed</param>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.ExecuteJavascriptAsync(System.String)">
+            <summary>
+            Asynchronously executes the given javascript 
+            </summary>
+            <param name="script">The jacvascript to be executed</param>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.RegisterJsObject(System.String,System.Object,System.Boolean)">
+            <summary>
+            Registers a javascript object in the browser
+            </summary>
+            <param name="jsObjectName">The name of global variable to be registered</param>
+            <param name="value">The value to be assigned to the registered global</param>
+            <param name="camelCaseJsVariableNames">Convert variable name to camel case</param>
+            <example>
+            To register the JS object "{name : "karthik",age :27}" and assign it to the global variable called fooGlobal
+            <code>
+            RegisterJsObject("fooGlobal",new {name = "karthik",age = 27},false);
+            </code>
+            </example>
+        </member>
+        <member name="E:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.FrameLoadEnd">
+            <summary>
+            Event handler that will get called when the browser is done loading a frame. Multiple frames may be loading at the same
+                        time. Sub-frames may start or continue loading after the main frame load has ended. This method will always be called
+                        for all frames irrespective of whether the request completes successfully.
+            
+            </summary>
+        </member>
+        <member name="E:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.Initalized">
+            <summary>
+            Event handler is called when underlying webbrowser control is loaded and attaches to the viewmodel
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.SourceUrl">
+            <summary>
+            The URL of the webpage the WebBrowserControl should navigate to
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.DevMode">
+            <summary>
+            Gets or Sets the WebBrowserControl to show/hide developer features
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.CefWpfWebBrowser">
+            <summary>
+            Gets the instance of the underlying browser control
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.EzeWebBrowserViewModel.ShowDevToolsCommand">
+            <summary>
+            Command to launch the developer tools
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.WebBrowser.FrameLoadEndEventArgs">
+            <summary>
+            Event arguments to the FrameLoadEnd event handler set up in IWebBrowser.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.WebBrowser.FrameLoadEndEventArgs.#ctor(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Creates a new instance of the class
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.FrameLoadEndEventArgs.Url">
+            <summary>
+            The URL that was loaded.
+            
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.FrameLoadEndEventArgs.IsMainFrame">
+            <summary>
+            Is this the Main Frame
+            
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.WebBrowser.FrameLoadEndEventArgs.HttpStatusCode">
+            <summary>
+            Http Status Code
+            
+            </summary>
+        </member>
+    </members>
+</doc>

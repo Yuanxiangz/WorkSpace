@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC5B9A3D-8487-4DBB-8D31-D036EBDDE27F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBMigaration</RootNamespace>
+    <AssemblyName>DBMigaration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eze.Ims.Automation.Framework, Version=2.13.0.222, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Automation.Framework.2.13.0.222\lib\net45\Eze.Ims.Automation.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.DataService.Desktop, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.Ims.DataService.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.DataServices.Automation, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.Ims.DataServices.Automation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Migration.Desktop, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.Ims.Migration.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Migration.Shared, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.Ims.Migration.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Platform.Api, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Platform.3.12.0.14\lib\net45\Eze.Ims.Platform.Api.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Platform.Cloud.Internal, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Platform.Automation.3.12.0.14\lib\net45\Eze.Ims.Platform.Cloud.Internal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Platform.Communication.Wcf, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Platform.Automation.3.12.0.14\lib\net45\Eze.Ims.Platform.Communication.Wcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Platform.Injector.Interface, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Platform.Automation.3.12.0.14\lib\net45\Eze.Ims.Platform.Injector.Interface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.Ims.Platform.Shared, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Platform.3.12.0.14\lib\net45\Eze.Ims.Platform.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.IMSDS.APITests.Shared, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.IMSDS.APITests.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.IMSDS.Shared, Version=3.1.0.65, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.IMSDS.APITests.Shared.3.1.0.65\lib\net45\Eze.IMSDS.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eze.NetEx, Version=3.12.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.NetEx.3.12.0.14\lib\net45\Eze.NetEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eze.Ims.Automation.Framework.2.13.0.222\lib\net45\Microsoft.Exchange.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MSTestExtensions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTestExtensions.3.0.0\lib\net40\MSTestExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="ImsTradingDataInitialization.cs" />
+    <Compile Include="ImsSetupManager.cs" />
+    <Compile Include="Migration.cs" />
+    <Compile Include="Permissions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TradingConfigDataPrivider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SQL\RunSQLFile.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Eze.Ims.Automation.Framework.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Eze.IMSDS.APITests.Shared.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiTestClientMessagingConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\DeleteDataTC.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\Insert_BasicOMSData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\pr_ETL_SecurityCashSync.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\pr_ETL_SecurityMasterSync.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\pr_ETL_UpdateSecurity_AssetType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SQL\Staging_SecurityMaster.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eze.Wpf.Resource</name>
+    </assembly>
+    <members>
+        <member name="T:Eze.Wpf.Resource.EzeDarkDesignTimeResourceDictionary">
+            <summary>
+            AppSkins EzeDark DesignTimeResourceDictionary
+            </summary>
+        </member>
+        <member name="M:Eze.Wpf.Resource.EzeDarkDesignTimeResourceDictionary.#ctor">
+            <summary>
+            Hardcode Source
+            </summary>
+        </member>
+        <member name="P:Eze.Wpf.Resource.EzeDarkDesignTimeResourceDictionary.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) to load resources from.
+            </summary>
+            <returns>The source location of an external resource dictionary. </returns>
+        </member>
+        <member name="T:Eze.Wpf.Resource.EzeLightDesignTimeResourceDictionary">
+            <summary>
+            AppSkins EzeLight DesignTimeResourceDictionary
+            </summary>
+        </member>
+        <member name="M:Eze.Wpf.Resource.EzeLightDesignTimeResourceDictionary.#ctor">
+            <summary>
+            Hardcode Source
+            </summary>
+        </member>
+        <member name="P:Eze.Wpf.Resource.EzeLightDesignTimeResourceDictionary.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) to load resources from.
+            </summary>
+            <returns>The source location of an external resource dictionary. </returns>
+        </member>
+        <member name="T:Eze.Wpf.Resource.EffectsDesignTimeResourceDictionary">
+            <summary>
+            Effects DesignTimeResourceDictionary
+            </summary>
+        </member>
+        <member name="M:Eze.Wpf.Resource.EffectsDesignTimeResourceDictionary.#ctor">
+            <summary>
+            Hardcode Source
+            </summary>
+        </member>
+        <member name="P:Eze.Wpf.Resource.EffectsDesignTimeResourceDictionary.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) to load resources from.
+            </summary>
+            <returns>The source location of an external resource dictionary. </returns>
+        </member>
+        <member name="T:Eze.Wpf.Resource.GeometriesDesignTimeResourceDictionary">
+            <summary>
+            Geometries DesignTimeResourceDictionary
+            </summary>
+        </member>
+        <member name="M:Eze.Wpf.Resource.GeometriesDesignTimeResourceDictionary.#ctor">
+            <summary>
+            Hardcode Source
+            </summary>
+        </member>
+        <member name="P:Eze.Wpf.Resource.GeometriesDesignTimeResourceDictionary.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) to load resources from.
+            </summary>
+            <returns>The source location of an external resource dictionary. </returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,3020 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eze.WpfEx.Controls</name>
+    </assembly>
+    <members>
+        <member name="F:Eze.WpfEx.Controls.AnimationHelper.AnimationFactorProperty">
+            <summary>
+            Setting the To and From properties of an Animation via binding to some property, X, is not allowed.
+            Instead, set the To and From properties to values between -1 and 1, with the target property set to AnimationFactor.
+            Then, bind the property being animated to a MultiBinding with AnimationFactor and X using a MultiplyConverter. 
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.CircularProgressBar">
+            <summary>
+            Circular ProgressBar
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.CircularProgressBar.OnApplyTemplate">
+            <summary>
+            Force RenderArc after applying template. Property changes may occur before ApplyTemplate is called.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.CollectionSearchEditor.CollectionSearchEditor_DataContextChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Resets the search text when a new record is selected
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.CheckComboBoxItem">
+            <summary>
+            The default container for the MultiSelectComboBox control.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.CheckComboBoxItem.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            This is the method that responds to the KeyUp event.
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.CheckComboBoxItem.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>
+            An event announcing that the keyboard is no longer focused
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.MultiSelectComboBox">
+            <summary>
+            A CustomComboBox which supports multiple selection
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.MultiSelectComboBox.#ctor">
+            <summary>
+            Creates a new instance of the MultiSelectComboBox control
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.MultiSelectComboBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            When overriden provides a way to configure the container for an item to be displayed in the ItemsControl
+            </summary>
+            <param name="element">The item container instance</param>
+            <param name="item">The item for which the container is created</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.MultiSelectComboBox.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+             When overriden provides a way to modify the item container before it is cleared
+            </summary>
+            <param name="element">The item container instance</param>
+            <param name="item">The item for which the container is created</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.MultiSelectComboBox.GetContainerForItemOverride">
+            <summary>
+            Overriden to always return a CheckComboBoxItem, override this to return any specific container
+            </summary>
+            <returns>A new instance of the container.</returns>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.MultiSelectComboBox.SelectedItemsProperty">
+            <summary>
+            The dependency property for the SelectedItems. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.MultiSelectComboBox.SelectedItems">
+            <summary>
+            A list of selected items
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.MultiSelectComboBox.SelectAllItems">
+            <summary>
+            Selects all items
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.DataGrids.DataGridRowHeaderCommand.Execute(System.Object)">
+            <summary>
+            Collapse/Expands the selected DataGridRow.
+            </summary>
+            <param name="parameter">The DataGridRowHeader</param>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute">
+            <summary>
+            EzeGridColumn Attribute
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.#ctor(System.Type,System.String,System.Boolean,System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="columnType"></param>
+            <param name="formatString"></param>
+            <param name="isChild"></param>
+            <param name="childType"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.#ctor(System.Type,System.String,System.Boolean,System.Type,System.Boolean)">
+            <summary>
+            Constructor with Text Wrapping
+            </summary>
+            <param name="columnType"></param>
+            <param name="formatString"></param>
+            <param name="isChild"></param>
+            <param name="childType"></param>
+            <param name="textWrapping"></param>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.ColumnType">
+            <summary>ColumnType</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.FormatString">
+            <summary>FormatString</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.IsChild">
+            <summary>IsChild</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.ChildType">
+            <summary>ChildType</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DataGrids.EzeGridColumnAttribute.TextWrapping">
+            <summary>TextWrapping</summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.DataGrids.GridViewInfoXMLSerializer">
+            <summary>
+            This class serializes/deserializes a GridViewInfo instance to and from XML string format.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.DataGrids.HorizontalMouseScrollHelper.TILT_HORIZ_FACTOR">
+            <summary>
+            multiplier of how far to scroll horizontally
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.DesignTimeResourceDictionary">
+            <summary>
+            For loading resource dictionaries at design-time only
+            </summary>
+            <remarks>Copied from http://social.technet.microsoft.com/wiki/contents/articles/23287.trick-to-use-a-resourcedictionary-only-when-in-design-mode.aspx</remarks>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.DesignTimeResourceDictionary._designTimeSource">
+            <summary>
+            Local field storing info about designtime source.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DesignTimeResourceDictionary.DesignTimeSource">
+            <summary>
+            Gets or sets the design time source.
+            </summary>
+            <value>
+            The design time source.
+            </value>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.DesignTimeResourceDictionary.Source">
+            <summary>
+            Gets or sets the uniform resource identifier (URI) to load resources from.
+            </summary>
+            <returns>The source location of an external resource dictionary. </returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.FilePicker">
+            <summary>
+                A simple control to add file picking functionality to the UI.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.OnDialogOkayCommandProperty">
+            <summary>
+            OnDialogOkayCommandProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.IsOpenDialogProperty">
+            <summary>
+            IsOpenDialogProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.IsSaveDialogProperty">
+            <summary>
+            IsSaveDialogProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FileNameProperty">
+            <summary>
+            FileNameProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FileNamesPropertyKey">
+            <summary>
+            FileNamesPropertyKey
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FileNamesProperty">
+            <summary>
+            FileNamesProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.InitialDirectoryProperty">
+            <summary>
+            InitialDirectoryProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FilterProperty">
+            <summary>
+            FilterProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.CheckFileExistsProperty">
+            <summary>
+            CheckFileExistsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.CheckPathExistsProperty">
+            <summary>
+            CheckPathExistsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.AddExtensionProperty">
+            <summary>
+            AddExtensionProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.DereferenceLinksProperty">
+            <summary>
+            DereferenceLinksProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.DefaultExtProperty">
+            <summary>
+            DefaultExtProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FilterIndexProperty">
+            <summary>
+            FilterIndexProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.DialogTitleProperty">
+            <summary>
+            DialogTitleProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.ValidateNamesProperty">
+            <summary>
+            ValidateNamesProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.FilePicker.FileNameVisibilityProperty">
+            <summary>
+            FileNameVisibility
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.FilePicker.#cctor">
+            <summary>
+            Static constructor for the type.  Assigns the appropriate default style key.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.FilePicker.OnApplyTemplate">
+            <summary>
+            Invoked whenever application code or internal processes call ApplyTemplate()
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.OnDialogOkayCommand">
+            <summary>
+            Gets or sets a command that will be invoked after the file selection dialog
+            has been closed with the "Okay" button, and the resultant FileName/FileNames have been
+            applied to the respective properties.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.FileName">
+            <summary>
+             Gets or sets a string containing the full path of the file selected in 
+             the file dialog box.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.FileNames">
+            <summary>
+                Gets the file names of all selected files in the dialog box.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.InitialDirectory">
+            <summary>
+             Gets or sets the initial directory displayed by the file dialog box.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.Filter">
+             <summary>
+                   Gets or sets the current file name filter string,
+                   which determines the choices that appear in the "Save as file type" or
+                   "Files of type" box at the bottom of the dialog box.
+            
+                   This is an example filter string:
+                   Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*"
+             </summary>
+             <remarks>
+              If DereferenceLinks is true and the filter string is null, a blank
+              filter string (equivalent to "|*.*") will be automatically substituted to work
+              around the issue documented in Knowledge Base article 831559
+                 Callers must have FileIOPermission(PermissionState.Unrestricted) to call this API.
+             </remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.FilterIndex">
+             <summary>
+              Gets or sets the index of the filter currently selected in the file dialog box.
+            
+              NOTE:  The index of the first filter entry is 1, not 0.  
+             </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.CheckFileExists">
+            <summary>
+             Gets or sets a value indicating whether
+             the dialog box displays a warning if the 
+             user specifies a file name that does not exist.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.CheckPathExists">
+            <summary>
+             Specifies that the user can type only valid paths and file names. If this flag is
+             used and the user types an invalid path and file name in the File Name entry field, 
+             a warning is displayed in a message box.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.DereferenceLinks">
+            <summary>
+             Gets or sets a value indicating whether the dialog box returns the location 
+             of the file referenced by the shortcut or whether it returns the location 
+             of the shortcut (.lnk).
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.AddExtension">
+            <summary>
+             Gets or sets a value indicating whether the
+             dialog box automatically adds an extension to a
+             file name if the user omits the extension.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.DefaultExt">
+            <summary>
+            The AddExtension property attempts to determine the appropriate extension
+            by using the selected filter.  The DefaultExt property serves as a fallback - 
+             if the extension cannot be determined from the filter, DefaultExt will
+            be used instead.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.DialogTitle">
+            <summary>
+                  Gets or sets a string shown in the title bar of the file dialog.
+                  If this property is null, a localized default from the operating
+                  system itself will be used (typically something like "Save As" or "Open")
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.IsOpenDialog">
+            <summary>
+            If set to True, an "OpenFileDialog" will be used for file selection.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.IsSaveDialog">
+            <summary>
+            If set to True, a "SaveFileDialog" will be used for file selection.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.ValidateNames">
+            <summary>
+             Gets or sets a value indicating whether the dialog box accepts only valid
+             Win32 file names.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.FilePicker.FileNameVisibility">
+            <summary>
+            Gets or sets the visibility of the FileName element of this control.
+            When false, the control is just a button that shows a FileDialog.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterData.GetFilterPropertyInfo(System.Type,System.String)">
+            <summary>
+            Gets filter property information for the requested property.
+            </summary>
+            <param name="type">Type that contains the property.</param>
+            <param name="propertyName">The name of the property to get filter information for.</param>
+            <returns>FilterPropertyInfo object with information about the property.</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterData.TypeToFilterType(System.Type)">
+            <summary>
+            Gets the filter type equivalent of an object type.
+            </summary>
+            <param name="type">The object type.</param>
+            <returns>FilterPropertyType equivalent of the object type.</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterData.FilterDataPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handle changes to FilterData that need to be saved
+            </summary>
+            <param name="sender"></param>
+            <param name="propertyChangedEventArgs"></param>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterData.FilterPropertyValueProviders">
+            <summary>
+            Populate this FilterPropertyValueProvider list to provide available values for particular filter properties.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterData.AutoSave">
+            <summary>
+            AutoSave toggle. When turned on, changes (to GroupExpression and Name) are saved automatically.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.FilterPropertyValueProvider">
+            <summary>
+            Provides available values to a FilterProperty
+            </summary>
+            <remarks>Targeted FilterProperty instances will by default use a ComboBox template populated by the provided values.</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterPropertyValueProvider.PropertyName">
+            <summary>
+            Name of the target FilterProperty to apply the values to.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterPropertyValueProvider.Values">
+            <summary>
+            Available values for the targeted FilterProperty.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.ItemsControlFilterBox">
+            <summary>
+                This control provides basic filtering to any ItemsControl that points to an instance using the FilterWith attached
+                property.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.ItemsControlFilterBox.FilterWithProperty">
+            <summary>
+                Specify the ItemsControlFilterBox which will provide filtering for this ItemsControl instance.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.ItemsControlFilterBox.SetFilterWith(System.Windows.UIElement,System.Object)">
+            <summary>
+                Setter for FilterWith attached property.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.ItemsControlFilterBox.GetFilterWith(System.Windows.UIElement)">
+            <summary>
+                Getter for FilterWith attached property.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.ItemsControlFilterBox.FilterOnProperty">
+            <summary>
+                Specify the property on the bound objects that this filter will be applied to
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.ItemsControlFilterBox.SetFilterOn(System.Windows.UIElement,System.String)">
+            <summary>
+                Setter for FilterOn attached property.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.ItemsControlFilterBox.GetFilterOn(System.Windows.UIElement)">
+            <summary>
+                Getter for FilterOn attached property.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.ItemsControlFilterBox.FilterTextProperty">
+            <summary>
+                The current filter value for this control.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.ItemsControlFilterBox.OnApplyTemplate">
+            <summary>
+                OnApplyTemplate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.ItemsControlFilterBox.FilterText">
+            <summary>
+                FilterText
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.NumericSpinner">
+            <summary>
+            NumericSpinner
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.ValueProperty">
+            <summary>
+            Dependency Object for the Value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.ValueTextProperty">
+            <summary>
+            Dependency Object for the ValueText of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.MinvalueProperty">
+            <summary>
+            Dependency Object for the Minimal Value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.MaxvalueProperty">
+            <summary>
+            Dependency Object for the Maximal Value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.DecimalPlacesProperty">
+            <summary>
+            Dependency Object for the Decimal Places of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.StepProperty">
+            <summary>
+            Dependency Object for the Step Value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.StepByFactorProperty">
+            <summary>Dependency Object for the StepByFactor property of the Control</summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.ShowSpinnerButtonsProperty">
+            <summary>
+            Dependency Object for the state of visibility of the Spinner Buttons
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.UpButtonCommandProperty">
+            <summary>
+            Dependency Object for the Up Button Command
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.DownButtonCommandProperty">
+            <summary>
+            Dependency Object for the Down Button Command
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.UnitLabelTextProperty">
+            <summary>
+            Dependency Object for the value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.UnitLabelVisibilityProperty">
+            <summary>
+            Dependency Object for the Minimal Value of the Control
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.IsTextBoxInputDisabledProperty">
+            <summary>Dependency Object for the IsTextBoxInputDisabled property of the Control</summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.NumericSpinner.HasErrorsProperty">
+            <summary>Dependency Object for the HasErrors property of the Control</summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.NumericSpinner.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Handles mousewheel action
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.NumericSpinner.#cctor">
+            <summary>
+            static contructor
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.NumericSpinner.OnApplyTemplate">
+            <summary>
+            OnApplyTemplate
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.NumericSpinner.#ctor">
+            <summary>
+            NumericSpinner
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.DecimalPlaces">
+            <summary> Number of digits shown after the decimal point </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.Value">
+            <summary>
+            Gets / Sets the value that the control holds
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+            <remarks>If Value exceeds <see cref="P:Eze.WpfEx.Controls.NumericSpinner.Maximum"/> or falls below <see cref="P:Eze.WpfEx.Controls.NumericSpinner.Minimum"/>, an <see cref="T:System.ArgumentException"/> is thrown</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.ValueText">
+            <summary>
+            Gets / Sets the value that the control shows on the TextBox
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.ShowSpinnerButtons">
+            <summary> Specifies whether the Up/Down Buttons are shown </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.Minimum">
+            <summary> Gets / Sets the minimal value of the control </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.Maximum">
+            <summary> Gets / Sets the maximal value of the control </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.Step">
+            <summary> Gets / Sets the step size of the control value </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.StepByFactor">
+            <summary> Gets / Sets whether the step is by value or by factor </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.UnitLabelText">
+            <summary> Specifies the value's unit text if applicable </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.UnitLabelVisibility">
+            <summary> Specifies whether to show the unit label </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.IsTextBoxInputDisabled">
+            <summary> Specifies whether the TextBox is readonly (can only use IncrementValue and DecrementValue, no text input) </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.HasErrors">
+            <summary> Specifies if there are validation errors. </summary>
+            <remarks> Validation only occurs when user explicity type "Enter" or "Space" key, or when focus leaves this control. </remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.UpButtonCommand">
+            <summary>UpButton Command</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.NumericSpinner.DownButtonCommand">
+            <summary>DownButton Command</summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.OnFocusSelectDataGridRowPropertyHost">
+            <summary>
+            Attached Property allowing DataGridCell elements to select its residing row when GotFocus
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.Relationship">
+            <summary>
+            Filter Relationship
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.ComparisonType">
+            <summary>
+            Filter Comparison Type
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.FilterPropertyType">
+            <summary>
+            Filter Property Type
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.FilterPropertyInfo">
+            <summary>
+            Filter Property Info
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterPropertyInfo.#ctor(System.String,System.String,Eze.WpfEx.Controls.Filter.FilterPropertyType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyDisplayName"></param>
+            <param name="propertyType"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterPropertyInfo.#ctor(System.String,System.String,System.String,Eze.WpfEx.Controls.Filter.FilterPropertyType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyFilterName"></param>
+            <param name="propertyDisplayName"></param>
+            <param name="propertyType"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterPropertyInfo.#ctor(System.String,System.String,System.String,Eze.WpfEx.Controls.Filter.FilterPropertyType,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyFilterName"></param>
+            <param name="propertyDisplayName"></param>
+            <param name="propertyType"></param>
+            <param name="availablePropertyValues"></param>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.DynamicFilterPropertyInfo">
+            <summary>
+            A FilterPropertyInfo object that allows for specifying a binding path to get the property value from an object.
+            For use with dynamic properties (e.g. EzeGrid dynamic columns)
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Filter.FilterEditor.AutoSaveProperty">
+            <summary>
+            AutoSave DependencyProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Filter.FilterEditor.SaveCancelVisibleProperty">
+            <summary>
+            SaveCancelVisible DependencyProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterEditor.AutoSave">
+            <summary>
+            Turn on or off AutoSave (default: off). When AutoSave is on, filter expression changes are saved automatically.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterEditor.SaveCancelVisible">
+            <summary>
+            Show or hide Save and Cancel buttons
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterEditor.ComboEditorTemplate">
+            <summary>
+            ComboEditor DataTemplate
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Filter.FilterPropertyAttribute.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterPropertyAttribute.PropertyType">
+            <summary>
+            (optional) Property Type (Default: FilterPropertyType.Auto).
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Filter.FilterPropertyAttribute.PropertyName">
+            <summary>
+            Property Name
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Filter.DynamicFilterPropertiesAttribute">
+            <summary>
+            Attribute to specify the property that contains a list of dynamic filter properties.
+            This attribute must be used on a static property of type IEnumerable&lt;FilterPropertyInfo&gt; with public getter.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.ConnectionStatusToColorConverter">
+            <summary>
+            Converts a Thickness to a double
+            Convert: returns a double equal to the thickness of the given edge, or the widest edge of supplied thickness if no parameter is given
+            ConvertBack: returns a uniform thickness from supplied non-negative double
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyToVisibilityConverter">
+            <summary>
+            Converts null or Empty string to Visibility. 
+            True/False mapping to Visibility can be specified by assigning TrueValue and FalseValue properties.
+            By default null or empty string => Collapsed, and Visible otherwise.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyToVisibilityConverter.FalseValue">
+            <summary>T value for converting from False</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyToVisibilityConverter.TrueValue">
+            <summary>T value for converting from True</summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Resources.Language">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Add_Expression">
+            <summary>
+              Looks up a localized string similar to Add Expression.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Add_Group">
+            <summary>
+              Looks up a localized string similar to Add Group.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.And">
+            <summary>
+              Looks up a localized string similar to And.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Apply">
+            <summary>
+              Looks up a localized string similar to Apply.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Apply_Alt">
+            <summary>
+              Looks up a localized string similar to _Apply.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Cancel_Alt">
+            <summary>
+              Looks up a localized string similar to Ca_ncel.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Close">
+            <summary>
+              Looks up a localized string similar to Close.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Close_Alt">
+            <summary>
+              Looks up a localized string similar to Cl_ose.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Delete_Alt">
+            <summary>
+              Looks up a localized string similar to _Delete.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Discard">
+            <summary>
+              Looks up a localized string similar to Discard.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_DiscardAll">
+            <summary>
+              Looks up a localized string similar to Discard All.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_DiscardAll_Alt">
+            <summary>
+              Looks up a localized string similar to _Discard All.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Load">
+            <summary>
+              Looks up a localized string similar to Load.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_No">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Ok">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Ok_Alt">
+            <summary>
+              Looks up a localized string similar to _OK.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Save">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Save_Alt">
+            <summary>
+              Looks up a localized string similar to _Save.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_SaveAll">
+            <summary>
+              Looks up a localized string similar to Save All.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_SaveAll_Alt">
+            <summary>
+              Looks up a localized string similar to _Save All.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Common_Yes">
+            <summary>
+              Looks up a localized string similar to Yes.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Contains">
+            <summary>
+              Looks up a localized string similar to Contains.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Ends_with">
+            <summary>
+              Looks up a localized string similar to Ends with.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Exception_SearchRequestHandlerIsNull">
+            <summary>
+              Looks up a localized string similar to No search handler was provided.  Please make sure that a SearchRequestHandler was specified for this control..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.EzeGrid_ColumnChooser">
+            <summary>
+              Looks up a localized string similar to Column Chooser.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Field">
+            <summary>
+              Looks up a localized string similar to Field.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Filter_Name">
+            <summary>
+              Looks up a localized string similar to Filter Name.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_Add_To_Group">
+            <summary>
+              Looks up a localized string similar to Add To Group.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_And_Group_Description">
+            <summary>
+              Looks up a localized string similar to PASS this group only if all child items PASS.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_Equals">
+            <summary>
+              Looks up a localized string similar to Equals.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_Group_Logic_Alt">
+            <summary>
+              Looks up a localized string similar to _Group Logic.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_NameAlreadyExists">
+            <summary>
+              Looks up a localized string similar to A filter already exists with this name..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_NameCannotBeEmpty">
+            <summary>
+              Looks up a localized string similar to A filter name is required..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterEditor_Or_Group_Description">
+            <summary>
+              Looks up a localized string similar to PASS this group only if at least one child item PASSES.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.FilterInfo_NewFilterNamePlaceholder">
+            <summary>
+              Looks up a localized string similar to &lt;New Filter&gt;.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.GlobalSearchControl_Search">
+            <summary>
+              Looks up a localized string similar to Search.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Greater_than">
+            <summary>
+              Looks up a localized string similar to Greater than.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Greater_than_or_equal_to">
+            <summary>
+              Looks up a localized string similar to Greater than or equal to.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Less_than">
+            <summary>
+              Looks up a localized string similar to Less than.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Less_than_or_equal_to">
+            <summary>
+              Looks up a localized string similar to Less than or equal to.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Not_equal_to">
+            <summary>
+              Looks up a localized string similar to Not equal to.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Operator">
+            <summary>
+              Looks up a localized string similar to Operator.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Or">
+            <summary>
+              Looks up a localized string similar to Or.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.RetrievingDetails">
+            <summary>
+              Looks up a localized string similar to [Retrieving Details].
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_AddRecurrence">
+            <summary>
+              Looks up a localized string similar to Add Recurrence.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration">
+            <summary>
+              Looks up a localized string similar to Recurrence Duration.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration_EndAfter">
+            <summary>
+              Looks up a localized string similar to End after.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration_EndDate">
+            <summary>
+              Looks up a localized string similar to End date.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration_NoEnd">
+            <summary>
+              Looks up a localized string similar to No end.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration_Runs">
+            <summary>
+              Looks up a localized string similar to runs.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceDuration_StartDate">
+            <summary>
+              Looks up a localized string similar to Start Date.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency">
+            <summary>
+              Looks up a localized string similar to Recurrence Frequency.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Daily">
+            <summary>
+              Looks up a localized string similar to Daily.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Daily_Every">
+            <summary>
+              Looks up a localized string similar to Every.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Daily_ExceptWeekends">
+            <summary>
+              Looks up a localized string similar to Except Weekends.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Daily_XDays">
+            <summary>
+              Looks up a localized string similar to day(s).
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_ExcludeMarketHolidays">
+            <summary>
+              Looks up a localized string similar to Exclude market holidays for:.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Monthly">
+            <summary>
+              Looks up a localized string similar to Monthly.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Monthly_Day">
+            <summary>
+              Looks up a localized string similar to Day.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Monthly_Months">
+            <summary>
+              Looks up a localized string similar to month(s).
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Monthly_OfEvery">
+            <summary>
+              Looks up a localized string similar to of every.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Monthly_The">
+            <summary>
+              Looks up a localized string similar to The.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly">
+            <summary>
+              Looks up a localized string similar to Weekly.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Every">
+            <summary>
+              Looks up a localized string similar to Every.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Friday">
+            <summary>
+              Looks up a localized string similar to Fri..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Monday">
+            <summary>
+              Looks up a localized string similar to Mon..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Saturday">
+            <summary>
+              Looks up a localized string similar to Sat..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Sunday">
+            <summary>
+              Looks up a localized string similar to Sun..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Thursday">
+            <summary>
+              Looks up a localized string similar to Thu..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Tuesday">
+            <summary>
+              Looks up a localized string similar to Tue..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_Wednesday">
+            <summary>
+              Looks up a localized string similar to Wed..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Weekly_XWeeksOn">
+            <summary>
+              Looks up a localized string similar to week(s) on.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly">
+            <summary>
+              Looks up a localized string similar to Yearly.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly_Of">
+            <summary>
+              Looks up a localized string similar to of.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly_On">
+            <summary>
+              Looks up a localized string similar to On.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly_OnThe">
+            <summary>
+              Looks up a localized string similar to On the.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly_RecurEvery">
+            <summary>
+              Looks up a localized string similar to Recur every.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_RecurrenceFrequency_Yearly_Years">
+            <summary>
+              Looks up a localized string similar to year(s).
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_Time">
+            <summary>
+              Looks up a localized string similar to Time.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_Time_SpecifyTimeWindow">
+            <summary>
+              Looks up a localized string similar to Specify end time.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_Time_StartDate">
+            <summary>
+              Looks up a localized string similar to Schedule Date.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_Time_StartTime">
+            <summary>
+              Looks up a localized string similar to Start Time.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Group_Time_TimeZone">
+            <summary>
+              Looks up a localized string similar to Time Zone.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_RemoveRecurrence">
+            <summary>
+              Looks up a localized string similar to Remove Recurrence.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_AtTime">
+            <summary>
+              Looks up a localized string similar to at {0}.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Daily">
+            <summary>
+              Looks up a localized string similar to every {0}{1}.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_DailyEveryday">
+            <summary>
+              Looks up a localized string similar to day.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_DailyEveryXDays">
+            <summary>
+              Looks up a localized string similar to {0} days.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_DailyExceptWeekend">
+            <summary>
+              Looks up a localized string similar to  except weekends.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_DuringTimeWindow">
+            <summary>
+              Looks up a localized string similar to between {0} to {1}.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_ExcludeMarketHolidays">
+            <summary>
+              Looks up a localized string similar to , excluding {0} market holidays.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Monthly">
+            <summary>
+              Looks up a localized string similar to every month.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_OnDate">
+            <summary>
+              Looks up a localized string similar to on {0}.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_OneTime_Format">
+            <summary>
+              Looks up a localized string similar to Event will run {0} {1} local time ({2})..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_OneTimeWindow_Format">
+            <summary>
+              Looks up a localized string similar to Event will run {0} local time ({1})..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Recurrence_Format">
+            <summary>
+              Looks up a localized string similar to Event will run {0} {1} local time ({2}) from {3} through {4}{5}..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_RecurrenceAfterXRuns_Format">
+            <summary>
+              Looks up a localized string similar to Event will run {0} {1} local time ({2}) from {3} for {4} times{5}..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_RecurrenceNoEnd_Format">
+            <summary>
+              Looks up a localized string similar to Event will run {0} {1} local time ({2}) from {3} indefinitely{4}..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Today">
+            <summary>
+              Looks up a localized string similar to today.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Weekly">
+            <summary>
+              Looks up a localized string similar to every{0}{1}.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_WeeklyEveryXWeeks">
+            <summary>
+              Looks up a localized string similar to  {0} weeks on.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Summary_Yearly">
+            <summary>
+              Looks up a localized string similar to every year.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_Title">
+            <summary>
+              Looks up a localized string similar to Schedule Event.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_ValidationError_EndDateTime">
+            <summary>
+              Looks up a localized string similar to Schedule end time must be greater than the start time..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_ValidationError_InvalidSettings">
+            <summary>
+              Looks up a localized string similar to Schedule contains invalid settings..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_ValidationError_StartDateTime">
+            <summary>
+              Looks up a localized string similar to Schedule start time must be equal or greater than current time.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_WeekNumber_First">
+            <summary>
+              Looks up a localized string similar to First.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_WeekNumber_Fourth">
+            <summary>
+              Looks up a localized string similar to Fourth.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_WeekNumber_Last">
+            <summary>
+              Looks up a localized string similar to Last.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_WeekNumber_Second">
+            <summary>
+              Looks up a localized string similar to Second.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Scheduler_WeekNumber_Third">
+            <summary>
+              Looks up a localized string similar to Third.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.Starts_with">
+            <summary>
+              Looks up a localized string similar to Starts with.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.ValidationError_TextToDayOfMonth">
+            <summary>
+              Looks up a localized string similar to Input must be within days of a month..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.ValidationError_TextToDouble">
+            <summary>
+              Looks up a localized string similar to Invalid input..
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Resources.Language.ValidationError_TextToPositiveNumber">
+            <summary>
+              Looks up a localized string similar to Input must be a positive number..
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl">
+            <summary>
+            Custom Control for Scheduler Daily Recurrence settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl.ExceptWeekendsProperty">
+            <summary>
+            ExceptWeekendsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl.EveryXDaysProperty">
+            <summary>
+            EveryXDaysProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl.ExceptWeekends">
+            <summary>
+            ExceptWeekends
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceControl.EveryXDays">
+            <summary>
+            EveryXDays
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl">
+            <summary>
+            Custom Control for Scheduler Monthly Recurrence settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.EveryXMonthsProperty">
+            <summary>
+            EveryXMonthsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.MonthlyRecurrenceOptionProperty">
+            <summary>
+            MonthlyRecurrenceOptionProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.DayXProperty">
+            <summary>
+            DayXProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.WeekNumberProperty">
+            <summary>
+            WeekNumberProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.DayofWeekProperty">
+            <summary>
+            DayofWeekProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.EveryXMonths">
+            <summary>
+            EveryXMonths
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.MonthlyRecurrenceOption">
+            <summary>
+            MonthlyRecurrenceOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.DayX">
+            <summary>
+            DayX
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.WeekNumber">
+            <summary>
+            WeekNumber
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceControl.DayofWeek">
+            <summary>
+            DayofWeek
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl">
+            <summary>
+            Custom Control for Scheduler Recurrence Duration settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceStartDateProperty">
+            <summary>
+            RecurrenceStartDateProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndOptionProperty">
+            <summary>
+            RecurrenceEndOptionProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndAfterXRunsProperty">
+            <summary>
+            RecurrenceEndAfterXRunsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndDateProperty">
+            <summary>
+            RecurrenceEndDateProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceStartDate">
+            <summary>
+            RecurrenceStartDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndOption">
+            <summary>
+            RecurrenceEndOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndAfterXRuns">
+            <summary>
+            RecurrenceEndAfterXRuns
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceDurationControl.RecurrenceEndDate">
+            <summary>
+            RecurrenceEndDate
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl">
+            <summary>
+            Custom Control for Scheduler Recurrence Frequency settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.RecurrenceListProperty">
+            <summary>
+            RecurrenceListProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.SelectedRecurrenceProperty">
+            <summary>
+            SelectedRecurrenceProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.ExcludeMarketHolidaysProperty">
+            <summary>
+            ExcludeMarketHolidaysProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.MarketCalendarListProperty">
+            <summary>
+            MarketCalendarListProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.SelectedMarketCalendarProperty">
+            <summary>
+            SelectedMarketCalendarProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.RecurrenceList">
+            <summary>
+            RecurrenceList
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.SelectedRecurrence">
+            <summary>
+            SelectedRecurrence
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.ExcludeMarketHolidays">
+            <summary>
+            ExcludeMarketHolidays
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.MarketCalendarList">
+            <summary>
+            MarketCalendarList
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.RecurrenceFrequencyControl.SelectedMarketCalendar">
+            <summary>
+            SelectedMarketCalendar
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl">
+            <summary>
+            Custom Control for Scheduler Start time settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.IsRecurrenceProperty">
+            <summary>
+            IsRecurrenceProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.StartTimeProperty">
+            <summary>
+            StartTimeProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.StartDateProperty">
+            <summary>
+            StartDateProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.IsTimeWindowProperty">
+            <summary>
+            IsTimeWindowProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.EndTimeProperty">
+            <summary>
+            EndTimeProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.EndDateProperty">
+            <summary>
+            EndDateProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.TimeZoneProperty">
+            <summary>
+            TimeZoneProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.IsRecurrence">
+            <summary>
+            IsRecurrence
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.StartTime">
+            <summary>
+            StartTime
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.StartDate">
+            <summary>
+            StartDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.IsTimeWindow">
+            <summary>
+            IsTimeWindow
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.EndTime">
+            <summary>
+            EndTime
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.EndDate">
+            <summary>
+            EndDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.ScheduleStartTimeControl.TimeZone">
+            <summary>
+            TimeZone
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl">
+            <summary>
+            Custom Control for Scheduler Weekly Recurrence settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.EveryXWeeksProperty">
+            <summary>
+            EveryXWeeksProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.SelectedDaysProperty">
+            <summary>
+            SelectedDaysProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.EveryXWeeks">
+            <summary>
+            EveryXWeeks
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceControl.SelectedDays">
+            <summary>
+            SelectedDays
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl">
+            <summary>
+            Custom Control for Scheduler Yearly Recurrence settings
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.EveryXYearsProperty">
+            <summary>
+            EveryXYearsProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.YearlyRecurrenceOptionProperty">
+            <summary>
+            YearlyRecurrenceOptionProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.MonthProperty">
+            <summary>
+            MonthProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DaysInMonthProperty">
+            <summary>
+            DaysInMonthProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DayXProperty">
+            <summary>
+            DayXProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.WeekNumberProperty">
+            <summary>
+            WeekNumberProperty
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DayofWeekProperty">
+            <summary>
+            DayofWeekProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.EveryXYears">
+            <summary>
+            EveryXYears
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.YearlyRecurrenceOption">
+            <summary>
+            YearlyRecurrenceOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.Month">
+            <summary>
+            Month
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DaysInMonth">
+            <summary>
+            DaysInMonth
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DayX">
+            <summary>
+            DayX
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.WeekNumber">
+            <summary>
+            WeekNumber
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceControl.DayofWeek">
+            <summary>
+            DayofWeek
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.DayOfWeekLocalizationConverter">
+            <summary>
+            Converts DayOfWeek enum to localized value
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.DayOfWeekLocalizationConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.DayOfWeekLocalizationConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.WeekdaysFlagEnumToBooleanConverter">
+            <summary>
+            Converts Weekdays flag enum To boolean for use by a group of toggles each representing one enum flag.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeekdaysFlagEnumToBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeekdaysFlagEnumToBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence">
+            <summary>
+            Recurrence interface (for daily, weekly, etc.)
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.RecurrenceTypeName">
+            <summary>
+            Identifier name for the Recurrence (e.g. "Daily", "Weekly", etc.)
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.RecurrenceEndOption">
+            <summary>
+            Selected end option for this recurrence
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.RecurrenceCount">
+            <summary>
+            Recurring count for this recurrence
+            </summary>
+            <remarks>Valid when RecurrenceEndOption is EndAfterXRuns</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.RecurrenceEndDate">
+            <summary>
+            End date for this recurrence
+            </summary>
+            <remarks>Valid when RecurrenceEndOption is EndDate</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.ExcludeMarketHoliday">
+            <summary>
+            Whether to exclude holiday for the selected market calendar
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.MarketCalendar">
+            <summary>
+            Selected market calendar to follow in this recurrence
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.IRecurrence.RecurrenceSummary">
+            <summary>
+            Schedule summary describing this recurrence portion
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleStartDate">
+            <summary>
+            Start date of this schedule
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleStartTime">
+            <summary>
+            Start time of this schedule
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleEndDate">
+            <summary>
+            End date of this scheduled event
+            </summary>
+            <remarks>Valid only if IsTimeWindow is true</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleEndTime">
+            <summary>
+            End time of this scheduled event
+            </summary>
+            <remarks>Valid only if IsTimeWindow is true</remarks>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.IsTimeWindow">
+            <summary>
+            Whether the scheduled event itself has a duration
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleTimeZoneInfo">
+            <summary>
+            Selected time zone for this schedule
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.ISchedule.ScheduleSummary">
+            <summary>
+            Schedule summary describing this schedule instance
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.Interfaces.OneTimeSchedule">
+            <summary>
+            OneTimeSchedule
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.ScheduleStartDate">
+            <summary>
+            ScheduleStartDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.ScheduleStartTime">
+            <summary>
+            ScheduleStartTime
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.ScheduleEndDate">
+            <summary>
+            ScheduleEndDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.ScheduleEndTime">
+            <summary>
+            ScheduleEndTime
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.IsTimeWindow">
+            <summary>
+            IsTimeWindow
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Schedule.ScheduleTimeZoneInfo">
+            <summary>
+            ScheduleTimeZoneInfo
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.Interfaces.OneTimeSchedule.ValidateProperties">
+            <summary>
+            Validate Properties
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.OneTimeSchedule.ScheduleSummary">
+            <summary>
+            ScheduleSummary
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.Interfaces.RecurrenceSchedule">
+            <summary>
+            RecurrenceSchedule
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.Interfaces.RecurrenceSchedule.ValidateProperties">
+            <summary>
+            Validate Properties
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Interfaces.RecurrenceSchedule.Recurrence">
+            <summary>
+            Recurrence
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.SchedulerTimeListProvider">
+            <summary>
+            Data Providers for Scheduler
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.SchedulerTimeListProvider.GetWeekNumberOfMonth(System.DateTime)">
+            <summary>
+            Gets the week number of the month from input date
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerTimeListProvider.TimeList">
+            <summary>
+            Provides list of time slots with 30-minute intervals for the scheduler
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerTimeListProvider.TimeZoneList">
+            <summary>
+            Provides list of timezones for the scheduler
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerTimeListProvider.MonthNameList">
+            <summary>
+            Provides list of month names based on CurrentCulture
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.Weekdays">
+            <summary>
+            Weekdays flag enum
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceOptions">
+            <summary>
+            Daily Recurrence Options
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceOptions">
+            <summary>
+            Monthly Recurrence Options
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceOptions">
+            <summary>
+            Yearly Recurrence Options
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.RecurrenceEndOptions">
+            <summary>
+            Recurrence End Options
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.MarketCalendars">
+            <summary>
+            Market Calendars
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.WeekNumbers">
+            <summary>
+            WeekNumbers
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel">
+            <summary>
+            DailyRecurrenceViewModel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.Recurrence.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.Recurrence.ValidateProperties">
+            <summary>
+            Validate Properties
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceTypeName">
+            <summary>
+            RecurrenceTypeName
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceStartDate">
+            <summary>
+            RecurrenceStartDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceEndOption">
+            <summary>
+            RecurrenceEndOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceCount">
+            <summary>
+            RecurrenceCount
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceEndDate">
+            <summary>
+            RecurrenceEndDate
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.ExcludeMarketHoliday">
+            <summary>
+            ExcludeMarketHoliday
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.MarketCalendar">
+            <summary>
+            Selected Market Calendar for holiday and weekend exlusion.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.Recurrence.RecurrenceSummary">
+            <summary>
+            Recurrence Summary string for display
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel.ExceptWeekends">
+            <summary>
+            Daily ExceptWeekends Option
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel.EveryXDays">
+            <summary>
+            Every X Days to execute the task
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel.RecurrenceTypeName">
+            <summary>
+            RecurrenceTypeName
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceViewModel.RecurrenceSummary">
+            <summary>
+            RecurrenceSummary
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel">
+            <summary>
+            MonthlyRecurrenceViewModel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.EveryXMonths">
+            <summary>
+            Every X Months to execute the task
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.MonthlyRecurrenceOption">
+            <summary>
+            MonthlyRecurrenceOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.DayX">
+            <summary>
+            Day X of the month
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.WeekNumber">
+            <summary>
+            Which weekday of the month (first, second, etc.)
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.DayofWeek">
+            <summary>
+            DayofWeek
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.RecurrenceTypeName">
+            <summary>
+            RecurrenceTypeName
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceViewModel.RecurrenceSummary">
+            <summary>
+            RecurrenceSummary
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.#ctor(System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            SchedulerViewModel
+            </summary>
+            <param name="marketCalendarList"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.ValidateProperties">
+            <summary>
+            Validate Properties
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.CurrentSchedule">
+            <summary>
+            CurrentSchedule
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.RecurrenceList">
+            <summary>
+            SchedulerTypeList
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.SelectedRecurrence">
+            <summary>
+            Selected Recurrence
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.MarketCalendarList">
+            <summary>
+            MarketCalendarList
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.SchedulerViewModel.ShowRecurrence">
+            <summary>
+            Show recurrence options
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel">
+            <summary>
+            WeeklyRecurrenceViewModel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel.EveryXWeeks">
+            <summary>
+            Every X Weeks to execute the task
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel.SelectedDays">
+            <summary>
+            Selected days of the week
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel.RecurrenceTypeName">
+            <summary>
+            RecurrenceTypeName
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceViewModel.RecurrenceSummary">
+            <summary>
+            RecurrenceSummary
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel">
+            <summary>
+            YearlyRecurrenceViewModel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.EveryXYears">
+            <summary>
+            Every X Years to execute the task
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.YearlyRecurrenceOption">
+            <summary>
+            YearlyRecurrenceOption
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.Month">
+            <summary>
+            Month
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.DaysInMonth">
+            <summary>
+            DaysInMonth
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.DayX">
+            <summary>
+            Day X of the month
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.WeekNumber">
+            <summary>
+            Which weekday of the month (first, second, etc.)
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.DayofWeek">
+            <summary>
+            DayofWeek
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.RecurrenceTypeName">
+            <summary>
+            RecurrenceTypeName
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceViewModel.RecurrenceSummary">
+            <summary>
+            RecurrenceSummary
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceView">
+            <summary>
+            Interaction logic for DailyRecurrenceView.xaml
+            </summary>
+            <summary>
+            DailyRecurrenceView
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.DailyRecurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceView">
+            <summary>
+            Interaction logic for MonthlyRecurrenceView.xaml
+            </summary>
+            <summary>
+            MonthlyRecurrenceView
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.MonthlyRecurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.SchedulerView">
+            <summary>
+            Interaction logic for SchedulerView.xaml
+            </summary>
+            <summary>
+            SchedulerView
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.SchedulerView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceView">
+            <summary>
+            Interaction logic for WeeklyRecurrenceView.xaml
+            </summary>
+            <summary>
+            WeeklyRecurrenceView
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.WeeklyRecurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceView">
+            <summary>
+            Interaction logic for YearlyRecurrenceView.xaml
+            </summary>
+            <summary>
+            YearlyRecurrenceView
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Scheduler.YearlyRecurrenceView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.SearchBox">
+            <summary>
+            A CustomControl which can be used as search box.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.TextProperty">
+            <summary>
+            The underlying DependencyProperty for the control's Text Property
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.ItemSelectedCommandProperty">
+            <summary>
+            The underlying DependencyProperty for ItemSelectedCommand
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.DownKeyPressedCommandProperty">
+            <summary>
+            The underlying DependencyProperty for DownKeyPressedCommand
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.UpKeyPressedCommandProperty">
+            <summary>
+            The underlying DependencyProperty for UpKeyPressedCommand
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.EnterKeyPressedCommandProperty">
+            <summary>
+            The underlying DependencyProperty for EnterKeyPressedCommand
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.ClearTextCommandProperty">
+            <summary>
+            The underlying DependencyProperty for ClearTextCommand
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.SearchBox.IsCollapsedProperty">
+            <summary>
+            IsCollapsed DependencyProperty
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.Text">
+            <summary>
+            Gets or Sets the search string in the control's TextBox
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.ItemSelectedCommand">
+            <summary>
+            Gets or sets the Command that is invoked when a search result item is selected. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.DownKeyPressedCommand">
+            <summary>
+            Gets or sets the Command that is invoked when Down key is pressed on the search box. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.UpKeyPressedCommand">
+            <summary>
+            Gets or sets the Command that is invoked when Up key is pressed on the search box. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.EnterKeyPressedCommand">
+            <summary>
+            Gets or sets the Command that is invoked when Enter key is pressed on the search box. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.ClearTextCommand">
+            <summary>
+            Gets or sets the Command that is invoked when Down key is  on the search box. This is a dependency property
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.SearchBox.IsCollapsed">
+            <summary>
+            Whether the control is in Collapsed state
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.CollectionIntersectionConverter">
+            <summary>
+            Will return a boolean specifying whether all IEnumerable bindings share one or or more common members.
+            Non-IEnumerable bindings may be used to trigger this converter to run, but will not be part of the evaluation.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.ContainsConverter">
+            <summary>
+            The first two bindings must be an IEnumerable and the object being checked for, in any order.
+            Additional bindings may be used to trigger this converter to be run, but will not be evaluated.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.BoolToValueConverter`1">
+            <summary>
+            Base Converter to convert boolean to T values
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.BoolToValueConverter`1.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.BoolToValueConverter`1.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.TypeConverters.BoolToValueConverter`1.FalseValue">
+            <summary>T value for converting from False</summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.TypeConverters.BoolToValueConverter`1.TrueValue">
+            <summary>T value for converting from True</summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.BoolNegateConverter">
+            <summary>
+            Converts boolean to negated value
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.BoolNegateConverter.#ctor">
+            <summary>
+            Constructor to set negation value
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.BoolToVisibleConverter">
+            <summary>
+            Converts boolean to visibility
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.DivideConverter">
+            <summary>
+            Use this converter to divide a data-bound numeric value by its ConverterParameter.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.DivideConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Divide a numeric value by a numeric parameter value.
+            </summary>
+            <param name="value">Data-bound numeric value to be divided.</param>
+            <param name="targetType">Unused.</param>
+            <param name="parameter">A numeric value to be used as the divisor.</param>
+            <param name="culture">Culture info.</param>
+            <returns>A double equal to "value" divided by "parameter".</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.DivideConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not implemented.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.DoubleToHalfDoubleConverter">
+            <summary>
+            Divides the supplied double by 2, truncates, and returns the result as a double	
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.GuidToBooleanConverter">
+            <summary>
+            Converts Guid to boolean (Guid.Empty = false)
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.GuidToBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.GuidToBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.ImplementsInterfaceToVisibilityConverter">
+            <summary>
+            Converts the assignability of the bound value to the Type specified in the parameter into a Visibility.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.ImplementsInterfaceToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.ImplementsInterfaceToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyConverter">
+            <summary>
+            Converts null or Empty string to true, and false otherwise
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.TypeConverters.StringIsNullOrEmptyConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.StringNotNullOrEmptyConverter">
+            <summary>
+            Converts null or Empty string to false, and true otherwise
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.StripUnderscoresConverter">
+            <summary>
+            This converter removes underscores from a string so that we can bind tooltips to label values that use access keys
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.TypeConverters.ThicknessToDoubleConverter">
+            <summary>
+            Converts a Thickness to a double
+            Convert: returns a double equal to the thickness of the given edge, or the widest edge of supplied thickness if no parameter is given
+            ConvertBack: returns a uniform thickness from supplied non-negative double
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Utilities.FocusHelper.FocusOnLoadProperty">
+            <summary>
+            Attached property which when set to True will cause a control to become focused when loaded.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Utilities.FocusHelper.SetFocusOnLoad(System.Windows.FrameworkElement,System.Boolean)">
+            <summary>
+            Set whether a control will become focused when loaded.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Utilities.FocusHelper.GetFocusOnLoad(System.Windows.FrameworkElement)">
+            <summary>
+            Get boolean indicating whether a control will become focused when loaded.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.ValidationRules.TextToDayOfMonthRule">
+            <summary>
+            Validation rule for text string conversion to days in a month
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.ValidationRules.TextToDoubleRule">
+            <summary>
+            Validation rule for text string conversion to double
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.ValidationRules.TextToPositiveNumberRule">
+            <summary>
+            Validation rule for text string conversion to positive number > 0
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.VisualTreeHelperEx.DisableWhenReadOnlyProperty">
+            <summary>
+            Allows controls to opt in on "disable when readonly" behaviour (while using AreChildrenReadOnlyProperty).
+            </summary>
+            <remarks>
+            ItemsControl based controls such as ListBox may need to remain enabled when readonly 
+            (i.e. selection does not trigger binding update to business models, but allows user to view additional details). 
+            By default ItemsControl are excluded from AreChildrenReadOnlyProperty handling.</remarks>
+            <example>
+            Use this property on any ItemsControl derivatives to actively opt in on "disable when readonly" if selection causes binding update to business model.
+            </example>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Watermark.WatermarkAdorner">
+            <summary>
+            Adorner for the watermark
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.contentPresenter">
+            <summary>
+            <see cref="T:System.Windows.Controls.ContentPresenter"/> that holds the watermark
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.#ctor(System.Windows.UIElement,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Eze.WpfEx.Controls.Watermark.WatermarkAdorner"/> class
+            </summary>
+            <param name="adornedElement"><see cref="T:System.Windows.UIElement"/> to be adorned</param>
+            <param name="watermark">The watermark</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.GetVisualChild(System.Int32)">
+            <summary>
+            Returns a specified child <see cref="T:System.Windows.Media.Visual"/> for the parent <see cref="T:System.Windows.Media.ContainerVisual"/>.
+            </summary>
+            <param name="index">A 32-bit signed integer that represents the index value of the child <see cref="T:System.Windows.Media.Visual"/>. The value of index must be between 0 and <see cref="P:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.VisualChildrenCount"/> - 1.</param>
+            <returns>The child <see cref="T:System.Windows.Media.Visual"/>.</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Implements any custom measuring behavior for the adorner.
+            </summary>
+            <param name="constraint">A size to constrain the adorner to.</param>
+            <returns>A <see cref="T:System.Windows.Size"/> object representing the amount of layout space needed by the adorner.</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            When overridden in a derived class, positions child elements and determines a size for a <see cref="T:System.Windows.FrameworkElement"/> derived class. 
+            </summary>
+            <param name="finalSize">The final area within the parent that this element should use to arrange itself and its children.</param>
+            <returns>The actual size used.</returns>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.VisualChildrenCount">
+            <summary>
+            Gets the number of children for the <see cref="T:System.Windows.Media.ContainerVisual"/>.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Watermark.WatermarkAdorner.Control">
+            <summary>
+            Gets the control that is being adorned
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Watermark.WatermarkService">
+            <summary>
+            Class that provides the Watermark attached property
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Watermark.WatermarkService.WatermarkProperty">
+            <summary>
+            Watermark Attached Dependency Property
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.Watermark.WatermarkService.itemsControls">
+            <summary>
+            Dictionary of ItemsControls
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.GetWatermark(System.Windows.DependencyObject)">
+            <summary>
+            Gets the Watermark property.  This dependency property indicates the watermark for the control.
+            </summary>
+            <param name="d"><see cref="T:System.Windows.DependencyObject"/> to get the property from</param>
+            <returns>The value of the Watermark property</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.SetWatermark(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Sets the Watermark property.  This dependency property indicates the watermark for the control.
+            </summary>
+            <param name="d"><see cref="T:System.Windows.DependencyObject"/> to set the property on</param>
+            <param name="value">value of the property</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.OnWatermarkChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the Watermark property.
+            </summary>
+            <param name="d"><see cref="T:System.Windows.DependencyObject"/> that fired the event</param>
+            <param name="e">A <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Event handler for the selection changed event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Controls.Primitives.ItemsChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.Control_GotKeyboardFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle the GotFocus event on the control
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.Control_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle the Loaded and LostFocus event on the control
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.ItemsSourceChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for the items source changed event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.ItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)">
+            <summary>
+            Event handler for the items changed event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Controls.Primitives.ItemsChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.ToggleWatermark(System.Windows.Controls.Control)">
+            <summary>
+            Shows or Hides watermark
+            </summary>
+            <param name="control">Element to add or remove watermark</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.RemoveWatermark(System.Windows.Controls.Control)">
+            <summary>
+            Remove the watermark from the specified element
+            </summary>
+            <param name="control">Element to remove the watermark from</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.ShowWatermark(System.Windows.Controls.Control)">
+            <summary>
+            Show the watermark on the specified control
+            </summary>
+            <param name="control">Control to show the watermark on</param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.ShouldShowWatermark(System.Windows.Controls.Control)">
+            <summary>
+            Indicates whether or not the watermark should be shown on the specified control
+            </summary>
+            <param name="c"><see cref="T:System.Windows.Controls.Control"/> to test</param>
+            <returns>true if the watermark should be shown; false otherwise</returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.Watermark.WatermarkService.SelectAllText(System.Windows.Controls.Control)">
+            <summary>
+            Select all text 
+            </summary>
+            <param name="c"><see cref="T:System.Windows.Controls.Control"/> to test</param>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.GridPositionProperty">
+            <summary>
+            Sets or gets the discrete position of an item on a WidgetGridPanel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.SetGridPosition(System.Windows.UIElement,System.Drawing.Rectangle)">
+            <summary>
+            Setter for GridPosition attached property
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetGridPosition(System.Windows.UIElement)">
+            <summary>
+            Getter for GridPosition attached property
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.ActualPositionProperty">
+            <summary>
+            Sets and gets the actual position (before size/scroll transforms) of the element on panel arrange.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.SetActualPosition(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>
+            Setter for the ActualPosition attached property.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetActualPosition(System.Windows.UIElement)">
+            <summary>
+            Getter for the ActualPosition attached property.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.DragTileEnabledProperty">
+            <summary>
+            Hooks up the element up to drag its parent widget on the WidgetGridPanel
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.SetDragTileEnabled(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Setter for the DragTileEnabled property
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetDragTileEnabled(System.Windows.UIElement)">
+            <summary>
+            Getter for the DragTileEnabled property
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.BoundsProperty">
+            <summary>
+            Sets the row/column bounds for widget placement.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.FloatItemsProperty">
+            <summary>
+            If true, items will float to the top of the grid.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.TileSideProperty">
+            <summary>
+            Sets the absolute size for the side of a single square widget.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.TilePaddingProperty">
+            <summary>
+            Sets the absolute size for the padding between tiles.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.PositionMemberPathProperty">
+            <summary>
+            Sets the path on the DataContext of created widgets to which the GridPosition property should be bound.
+            </summary>
+        </member>
+        <member name="F:Eze.WpfEx.Controls.WidgetGridPanel.ScaleToFitProperty">
+            <summary>
+            Whether or not the grid should scale itself to fit within constrained dimensions.
+            </summary>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetScaleToFit(System.Windows.Size)">
+            <summary>
+            A transform that will scale an item to fit within the specified dimensions.
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetTranslateToFit(System.Windows.Point,System.Windows.Size)">
+            <summary>
+            A transform that will translate an item to fit within the specified dimensions
+            as well as adjusting for scrolling.
+            </summary>
+            <param name="position"></param>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GetTransformToFit(System.Windows.Point,System.Windows.Size)">
+            <summary>
+            A transform that will scale an item and translate it to account for the specified dimensions
+            and scrolling.
+            </summary>
+            <param name="position"></param>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.MousePositionToGridPosition(System.Windows.Point)">
+            <summary>
+            Convert a relative (to this panel) mouse position into a discrete position on the grid.
+            </summary>
+            <param name="mousePosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.GridPositionToLayoutPosition(System.Drawing.Rectangle)">
+            <summary>
+            Convert a discrete position on the grid to an actual layout position for the widget.
+            </summary>
+            <param name="gridPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.PlaceWidget(System.Windows.DependencyObject)">
+            <summary>
+            Place a widget at its grid position (adjust all other elements around it)
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.FindValidPlacementTarget(System.Drawing.Rectangle,System.Windows.DependencyObject)">
+            <summary>
+            Find a valid location to place the widget, relative to the desired position.
+            </summary>
+            <param name="desiredPosition"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.AnimateToPosition(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>
+            Animate the given object to occupy the given layout position.
+            </summary>
+            <param name="obj"></param>
+            <param name="endPosition"></param>
+        </member>
+        <member name="M:Eze.WpfEx.Controls.WidgetGridPanel.AnimateToOpacity(System.Windows.UIElement,System.Double)">
+            <summary>
+            Animate the given object to the given opacity.
+            </summary>
+            <param name="obj"></param>
+            <param name="opacity"></param>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.Bounds">
+            <summary>
+            Sets the row/column bounds for widget placement.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.FloatItems">
+            <summary>
+            If true, items will float to the top of the grid.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.TileSide">
+            <summary>
+            Sets the absolute size for the side of a single square widget.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.TilePadding">
+            <summary>
+            Sets the absolute size for the padding between tiles.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.PositionMemberPath">
+            <summary>
+            Sets the path on the DataContext of created widgets to which the GridPosition property should be bound.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.ScaleToFit">
+            <summary>
+            Whether or not the grid should scale itself to fit within constrained dimensions.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.TotalTileSide">
+            <summary>
+            The total dimensions (plus padding) of the side of a one-unit tile.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.WidgetGridPanel.TotalGridDimensions">
+            <summary>
+            The smallest rectangle that contains all items on the grid.
+            </summary>
+        </member>
+        <member name="T:Eze.WpfEx.Controls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Eze.WpfEx.Controls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

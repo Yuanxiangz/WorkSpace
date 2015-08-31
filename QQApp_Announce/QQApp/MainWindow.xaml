@@ -1,0 +1,19 @@
+﻿<Window x:Class="QQApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="648" Closing="Window_Closing">
+    <Grid Background="#FFABBFDE">
+        <Menu Height="23" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="626" AllowDrop="True">
+            <MenuItem DataContext="{Binding Path=Items/Header.Length}" Header="File" Click="MenuItem_Click">
+                <MenuItem Header="Login" />
+                <MenuItem Header="Exit" />
+            </MenuItem>
+        </Menu>
+        <ListView Name="FriendListListView" Width="84" Margin="0,0,542,0" Height="362" VerticalAlignment="Bottom"></ListView>
+        <Label Content="Online Users:" Height="23" Name="label1" Width="84" Margin="-1,25,543,363" Background="{x:Null}" />
+        <TextBox Height="255" HorizontalAlignment="Left" Margin="100,29,0,0" Name="ShowTextBox" VerticalAlignment="Top" Width="514" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" IsEnabled="True" />
+        <TextBox Height="57" HorizontalAlignment="Left" Margin="100,313,0,0" Name="InputTextBox" VerticalAlignment="Top" Width="514" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" KeyDown="InputTextBox_KeyDown" />
+        <Button Content="Send" Height="20" HorizontalAlignment="Left" Margin="539,379,0,0" Name="SendButton" VerticalAlignment="Top" Width="75" Click="SendButton_Click" />
+        <Button Content="Whisper" Name="WhisperButton" HorizontalAlignment="Left" Margin="459,379,0,0" VerticalAlignment="Top" Width="75" Click="WhisperButton_Click"/>
+    </Grid>
+</Window>

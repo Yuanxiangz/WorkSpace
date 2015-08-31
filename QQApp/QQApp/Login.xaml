@@ -1,0 +1,9 @@
+﻿<Window x:Class="QQApp.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="User Login" Height="86" Width="255">
+    <Grid>
+        <Label Content="Name:" Height="28" HorizontalAlignment="Left" Margin="0,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="50,12,0,0" Name="UserTextBox" VerticalAlignment="Top" Width="150" MaxLength="20" KeyDown="UserTextBox_KeyDown" />
+    </Grid>
+</Window>

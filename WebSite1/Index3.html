@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The first website</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css" />
+
+    <link href="test.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="lib/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angular-1.3.4/angular.js"></script>
+    <script type="text/javascript" src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+
+</head>
+<body>
+    <div id="example">
+        <div class="wrapper">
+            <!--<div id="tabstrip">
+                <ul>
+                    <li class="k-state-active">Dimensions &amp; Weights</li>
+                    <li>Engine</li>
+                    <li>Chassis</li>
+                </ul>
+            </div>-->
+            <div id="example" ng-app="KendoDemos">
+                <div class="demo-section k-header">
+                    <div ng-controller="MyCtrl">
+                        <div kendo-tab-strip k-content-urls="[ '../content/content1.html', '../content/content2.html']">
+                            tab list
+                            <ul>
+                                <li class="k-state-active">First tab</li>
+                                <li>Second tab</li>
+                            </ul>
+                        </div>
+                        <div id="chart">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                angular.module("KendoDemos", ["kendo.directives"])
+                    .controller("MyCtrl", function ($scope) {
+                        $scope.hello = "Hello from Controller!";
+
+                        $(document).ready(function () {
+                            $("#chart").kendoChart({
+                                series: [{
+                                    type: "pie",
+                                    startAngle: 150,
+                                    data: addColors()
+                                }]
+                            });
+
+                            var a = $(".wrapper").css('height');
+                            var b = undefined;
+                            test();
+                            console.log([].length);
+                        });
+
+                        function addColors() {
+                            var aaaa = $(".wrapper").css('height');
+                            var baseColor = kendo.parseColor("#006634");
+                            var array = getMockedData();
+                            var num = array.length;
+                            var colors = getBrightenColors(baseColor, num);
+                            for (var i = 0; i < num; i++) {
+                                array[i].color = colors[i].toHex();
+                            }
+
+                            return array;
+                        }
+
+                        function getMockedData() {
+                            return [{
+                                category: "Asia",
+                                value: 53.8
+                            }, {
+                                category: "Europe",
+                                value: 16.1
+                            }, {
+                                category: "Latin America",
+                                value: 11.3
+                            }, {
+                                category: "Africa",
+                                value: 9.6
+                            }, {
+                                category: "Middle East",
+                                value: 5.2
+                            }, {
+                                category: "North America",
+                                value: 3.6
+                            }, {
+                                category: "Asia2",
+                                value: 53.8
+                            }, {
+                                category: "Europe2",
+                                value: 16.1
+                            }, {
+                                category: "Latin America2",
+                                value: 11.3
+                            }, {
+                                category: "Africa2",
+                                value: 9.6
+                            }, {
+                                category: "Middle East2",
+                                value: 5.2
+                            }, {
+                                category: "North America2",
+                                value: 3.6
+                            }, {
+                                category: "Asia3",
+                                value: 53.8
+                            }, {
+                                category: "Europe3",
+                                value: 16.1
+                            }, {
+                                category: "Latin America3",
+                                value: 11.3
+                            }, {
+                                category: "Africa3",
+                                value: 9.6
+                            }, {
+                                category: "Middle East3",
+                                value: 5.2
+                            }, {
+                                category: "North America3",
+                                value: 3.6
+                            }]
+                        }
+
+                        function getBrightenColors(baseColor, num) {
+                            var colors = [];
+                            var i = 0;
+                            var max = 255;
+                            var stepr = Math.floor((max - baseColor.r) / num);
+                            var stepg = Math.floor((max - baseColor.g) / num);
+                            var stepb = Math.floor((max - baseColor.b) / num);
+
+                            for (i; i < num; i++) {
+                                var newColor = new kendo.Color();
+                                newColor.r = baseColor.r + i * stepr;
+                                newColor.g = baseColor.g + i * stepg;
+                                newColor.b = baseColor.b + i * stepb;
+                                colors.push(newColor);
+                            }
+
+                            return colors;
+                        };
+
+                        function test(func)
+                        {
+                            func && func.call();
+                            //func.call();
+                        }
+                    })
+            </script>
+        </div>
+    </div>
+
+    <!--<script>
+        function onSelect(e) {
+            kendoConsole.log("Selected: " + $(e.item).find("> .k-link").text());
+        }
+
+        $(document).ready(function () {
+            var ts = $("#tabstrip").kendoTabStrip({
+                tabPosition: "bottom",
+                animation: { open: { effects: "fadeIn" } },
+                contentUrls: [
+                            '../content/content1.html',
+                            '../content/content2.html',
+                            '../content/content3.html'
+                ]
+            }).data('kendoTabStrip');
+        });
+    </script>-->
+    <style>
+        .wrapper {
+            height: 455px;
+            margin: 20px auto;
+            padding: 20px 0 0 0;
+        }
+
+        #tabstrip {
+            max-width: 400px;
+            float: right;
+            margin-bottom: 20px;
+        }
+
+            #tabstrip .k-content {
+                height: 320px;
+                overflow: auto;
+            }
+
+        .specification {
+            max-width: 670px;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+            .specification dt, dd {
+                max-width: 140px;
+                float: left;
+                margin: 0;
+                padding: 5px 0 8px 0;
+            }
+
+            .specification dt {
+                clear: left;
+                width: 100px;
+                margin-right: 7px;
+                padding-right: 0;
+                opacity: 0.7;
+            }
+
+            .specification:after, .wrapper:after {
+                content: ".";
+                display: block;
+                clear: both;
+                height: 0;
+                visibility: hidden;
+            }
+    </style>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<QuestionMap>
+  <Map Question="1" value="Distance"/>
+  <Map Question="2" value="Distance"/>
+  <Map Question="3" value="Distance"/>
+  <Map Question="4" value="Distance"/>
+  <Map Question="5" value="Distance"/>
+  <Map Question="6" value="StartEndMaxStops"/>
+  <Map Question="7" value="StartEndExactStops"/>
+  <Map Question="8" value="StartEndShortest"/>
+  <Map Question="9" value="StartEndShortest"/>
+</QuestionMap>

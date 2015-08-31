@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eze.Ims.Platform.Desktop.UnitTestUtilities</name>
+    </assembly>
+    <members>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.ControlCreator`1">
+            <summary>
+            An Factory to create function
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.IControlCreator`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.IControlCreator`1.CreateControl">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.ControlCreator`1.#ctor(System.Func{`0})">
+            <summary>
+            Creates a new instance of the class
+            </summary>
+            <param name="factory">The factory function for creating controls</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.ControlCreator`1.#ctor">
+            <summary>
+             Creates a new instance of the class, with default factory
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.ControlCreator`1.CreateControl">
+            <summary>
+            Creates a new instance of type T
+            </summary>
+            <returns>A new instance of type T</returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.ControlCreator`1.Factory">
+            <summary>
+            FactoryFunction for the ControlCreater
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedException``1(System.Action,System.String)">
+            <summary>
+            Executes the action and asserts if the type of expected exception is not thrown
+            </summary>
+            <typeparam name="T">Type of expected exception</typeparam>
+            <param name="action">Test action to be executes</param>
+            <param name="message">Optional: Exception message</param>
+            <returns>Null if no exception was raised, if exception of type T was raised then it returns a instance of it</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentException(System.String,System.Action,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="argumentName"></param>
+            <param name="action"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentException``1(System.String,System.Action,System.String)">
+            <summary>
+            Executes the action and asserts if an argument execption was thrown
+            </summary>
+            <typeparam name="T">Type of argument exception</typeparam>
+            <param name="argumentName">argument name</param>
+            <param name="action">action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>The raised argument exception</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentNullException(System.String,System.Action,System.String)">
+            <summary>
+             Executes the action and asserts if an argumentnull execption was thrown
+            </summary>
+            <param name="argumentName">argument names</param>
+            <param name="action">action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>The raised argument exception</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedExceptionAsync``1(System.Func{System.Threading.Tasks.Task},System.String)">
+            <summary>
+            Executes the action(which returns a Task) and asserts if it threw an expected exception
+            </summary>
+            <typeparam name="T">Type of exception expected</typeparam>
+            <param name="action">The action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>The raised exception</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentExceptionAsync(System.String,System.Func{System.Threading.Tasks.Task},System.String)">
+            <summary>
+             Executes the action and asserts if an argument exception was thrown
+            </summary>
+            <param name="argumentName">argument names</param>
+            <param name="action">action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>The raised argument exception</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentExceptionAsync``1(System.String,System.Func{System.Threading.Tasks.Task},System.String)">
+            <summary>
+             Executes the action and asserts if an argumentnull execption was thrown
+            </summary>
+            <param name="argumentName">argument names</param>
+            <param name="action">action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>The raised generic type of argument exception</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.ExceptionAssert.ExpectedArgumentNullExceptionAsync(System.String,System.Func{System.Threading.Tasks.Task},System.String)">
+            <summary>
+             Executes the action and asserts if an argumentnull execption was thrown
+            </summary>
+            <param name="argumentName">argument names</param>
+            <param name="action">action which causes the exception</param>
+            <param name="message">exeception message</param>
+            <returns>Instance of the raised argument null exception</returns>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestException">
+            <summary>
+            An exception
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestException.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Not sure why we have this
+            </summary>
+            <param name="info">Serialization Info</param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestHelper">
+            <summary>
+            A Collection of helper functions for unitesting
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestHelper.CreateNewApp">
+            <summary>
+            Creates a new instance of System.Windows.Application
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.TestHelper.CreateSTAThreadAndExecute(System.Action)">
+            <summary>
+            Creates a new thread with ApartmentState STA and executes the Action in that thread
+            Use this to run tests which create a new Window
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager">
+            <summary>
+            A Class used to create and manage a mock UIThread during unittesting
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.#ctor(System.Boolean)">
+            <summary>
+            Creates an new UIThreadManager, captures the context and starts the UIThread
+            </summary>
+            <param name="startAndCaptureContext">If true starts the UIThread and captures the context for UITaskScheduler. And starts the UIThread</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.#ctor">
+            <summary>
+            Creates a new instance of UIThreadManager
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.StartUIThread">
+            <summary>
+            Starts the Ui-Thread
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.StartUIThread(System.Globalization.CultureInfo)">
+            <summary>
+            Starts the Ui-Thread with the given culture info
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.StopUIThread">
+            <summary>
+            Stops the Ui-Thread
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.Invoke(System.Delegate,System.Object[])">
+            <summary>
+            Invokes a method on the UIThread
+            </summary>
+            <param name="callback">the delegate to invoke</param>
+            <param name="args">arguments for the delegate</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEventsWhile(System.Windows.Threading.Dispatcher,System.Func{System.Boolean},System.Int32)">
+            <summary>
+            Will continue to process messages in the provided dispatcher's queue (of background priority) untill callback returns true or timeout elapses
+            </summary>
+            <param name="dispatcher">Dispatcher on which to execute the callback</param>
+            <param name="callback">Callback function</param>
+            <param name="milliseconds">Millisecond timeout</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEventsWhile(System.Func{System.Boolean},System.Int32)">
+            <summary>
+            Will continue to process messages in the dispatcher queue (of background priority) untill callback returns true or timeout elapses
+            </summary>
+            <param name="callback">CallBack function</param>
+            <param name="milliseconds">Millisecond Timeout</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEventsWhile(System.Func{System.Boolean},System.TimeSpan)">
+            <summary>
+            Will continue to process messages in the dispatcher queue (of background priority) untill callback returns true or timeout elapses
+            </summary>
+            <param name="callback">CallBack function</param>
+            <param name="timeout">Timespan Timeout</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents">
+            <summary>
+            Enters the message loop to process all pending messages of background priority are executed
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents(System.Double)">
+            <summary>
+             Enters the message loop to process all pending messages of background priority are executed or the timeout is elapsed
+            </summary>
+            <param name="timeoutMilliseconds">Timeout in milliseconds</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents(System.TimeSpan)">
+            <summary>
+            Enters the message loop to process all pending messages of background priority are executed or the timeout is elapsed
+            </summary>
+            <param name="timeout">Timeout in TimeSpan</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents(System.Windows.Threading.DispatcherPriority)">
+            <summary>
+            Enters the message loop to process all pending messages down to the specified
+            priority. This method returns after all messages have been processed.
+            </summary>
+            <param name="priority">Minimum priority of the messages to process.</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents(System.Windows.Threading.Dispatcher)">
+            <summary>
+            Processes all pending messages on the given dispatcher which have a priority of background
+            </summary>
+            <param name="dispatcher">dispatcher on which to process messages</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.DoEvents(System.Windows.Threading.Dispatcher,System.Double)">
+            <summary>
+            Processes all pending messages on the given dispatcher which have a priority of background untill timeout
+            </summary>
+            <param name="dispatcher">dispatcher on which to process message</param>
+            <param name="timeout">millisecond timeout</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.RunUIThread``1(System.Action{``0},``0)">
+            <summary>
+            Start a new Ui-Thread and executes the callback on it
+            </summary>
+            <typeparam name="T">Type of argument which the callback takes</typeparam>
+            <param name="callback">callback</param>
+            <param name="data">parameter for callback</param>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.UIThreadManager.Dispatcher">
+            <summary>
+            The Dispatcher corresponding to the current mock Ui-Thread
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`2">
+            <summary>
+            A helper class to create and manage windows for testing UI components
+            </summary>
+            <typeparam name="T">Type of WPF control to be instantiated in the window</typeparam>
+            <typeparam name="TW">Type of window</typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`2.ShowWindow(System.Action{`0},Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs{`0})">
+            <summary>
+            Creates a launches a new window and executes an action on the main thread of the Window. Returns when the window is closed
+            </summary>
+            <param name="processControlCallback">The action to be executed</param>
+            <param name="args">Holds the windowmanager arguments</param>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1">
+            <summary>
+            A helper class to create and manage windows for testing UI components
+            </summary>
+            <typeparam name="T">Type of WPF control to be instantiated in the window</typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.ShowWindow(System.Action{`0},Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs{`0})">
+            <summary>
+            Creates a launches a new window and executes an action on the main thread of the Window. Returns when the window is closed
+            </summary>
+            <param name="processControlCallback">The action to be executed</param>
+            <param name="args">Holds the windowmanager arguments</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.Dispose">
+            <summary>
+            Calls CleanUp
+            </summary>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.Invoke(System.Action{`0})">
+            <summary>
+                Invoke a method on a control of type T in its own thread.
+            </summary>
+            <param name="callback">Test delegate method.</param>
+            <exception cref="T:System.Reflection.TargetInvocationException">
+                If the test fails, the exception will come back wrapped
+                in <see cref="T:System.Reflection.TargetInvocationException"/>.
+            </exception>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.Cleanup">
+            <summary>
+            Closes and performs clean up on the window
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.Title">
+            <summary>
+            Title of the window
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManager`1.Control">
+            <summary>
+            The instance of the WPF control created on the window
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs`1">
+            <summary>
+            A class which holds the arugments for the WindowManager
+            </summary>
+            <typeparam name="T">The WPF control/framework element which needs to be created in the window</typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs`1.#ctor">
+            <summary>
+            Creates a new instance of windowmanager args
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs`1.ShutdownDispatcher">
+            <summary>
+            If true, the dispatcher is shutdown when wndow is closed
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs`1.ControlCreator">
+            <summary>
+            The factory which creates instances of the wpf control
+            </summary>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.WindowManagerArgs`1.WindowCreator">
+            <summary>
+            A factory which creates instances of type of Window
+            </summary>
+        </member>
+        <member name="T:Eze.Ims.Platform.Desktop.UnitTestUtilities.XamlControlCreator`1">
+            <summary>
+            An type of ControlCreator factory which creates control from xaml string
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.XamlControlCreator`1.#ctor(System.String)">
+            <summary>
+            Creates a new instance of XamlControlCreator
+            </summary>
+            <param name="xaml">The xaml markup which describes a control of type T</param>
+        </member>
+        <member name="M:Eze.Ims.Platform.Desktop.UnitTestUtilities.XamlControlCreator`1.CreateControl">
+            <summary>
+            Creates a new instance of type T (From the xaml markup provided)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Eze.Ims.Platform.Desktop.UnitTestUtilities.XamlControlCreator`1.Xaml">
+            <summary>
+            The xaml markup which describes the control T
+            </summary>
+        </member>
+    </members>
+</doc>
